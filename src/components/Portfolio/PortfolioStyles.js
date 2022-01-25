@@ -1,0 +1,131 @@
+import styled from 'styled-components';
+import { MdOutlineNavigateNext } from 'react-icons/md';
+import { MdOutlineNavigateBefore } from 'react-icons/md';
+import { device } from '../../assets/device';
+import Slider from "react-slick";
+
+
+export const Section = styled.section`
+padding: 4rem 0;
+background-color: ${({ theme, toggle }) => toggle ? theme.colors.darkMode : theme.colors.white};
+
+`
+
+export const StyledContainer = styled.div`
+    max-width: 1100px;
+    margin:auto;
+`
+
+export const StyledItem = styled.div`
+    height: 180px;
+    position:relative;
+    background-size: cover; 
+
+    @media ${device.mobileM}{
+        height:210px;
+    }
+    @media ${device.mobileL}{
+        height:230px;
+    }
+    @media ${device.tablet}{
+        height:220px;
+    }
+
+    @media ${device.laptop}{
+        height:240px;
+    }
+
+
+
+    .overlay{
+        position:absolute;
+        bottom: 0;
+        left:0;
+        right:0;
+        background-color: rgba(0,0,0, 0.86);
+        width:100%;
+        height: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        transition: .4s ease-in-out;
+        overflow:hidden;
+
+        p{
+            color:white;
+        }
+
+
+    }
+
+    &:hover .overlay{
+        height:100%;
+    }
+
+    img{
+        width:100%;
+        height:100%;
+
+    }
+
+
+`
+
+export const StyledSlider = styled(Slider)`
+
+width: 85%;
+margin:auto;
+.slick-prev::before, .slick-next::before{
+    display: none;    
+}
+
+.slick-arrow.slick-prev, .slick-arrow.slick-next{
+    width:40px;
+    height:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+div{
+    display: flex;
+    gap:20px;
+}
+
+.dotsClass{
+    padding:24px;
+}
+
+.slick-dots li button::before{
+    font-size: 15px;
+    color:${({ theme }) => theme.colors.basePurple};
+}
+
+margin-bottom: 8rem;
+`;
+
+export const NextIcon = styled(MdOutlineNavigateNext)`
+    color: ${({ theme }) => theme.colors.basePurple};
+    font-size: 60px;
+`
+
+export const PrevIcon = styled(MdOutlineNavigateBefore)`
+    color: ${({ theme }) => theme.colors.basePurple};
+    font-size: 60px;  
+`
+export const StyledButton = styled.button`
+    padding: 0.6rem 1.2rem;
+    background-color: #705EDC;
+    border: none;
+    border-radius: 8px;
+    color:white;
+    cursor: pointer;
+    margin-top: 1rem;
+    right:0;
+
+`
+
+
