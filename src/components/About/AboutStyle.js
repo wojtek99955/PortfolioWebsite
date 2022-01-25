@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { SectionTittle } from '../Atoms/SectionTittle';
 import { device } from '../../assets/device';
 import img from "../photos/portfolio-img.jpg";
+import { NavLink } from "react-router-dom";
 
 export const StyledSection = styled.section`
 background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.basePurple};
@@ -76,5 +77,27 @@ export const DescriptionContainer = styled.div`
 export const StyledSectionTittle = styled(SectionTittle)`
     h3, h2{
         color:white;
+    }
+`
+
+export const LinksContainer = styled.div`
+display:flex;
+gap:1rem;
+justify-content:center;
+
+@media ${device.tablet}{
+    justify-content:start;
+}
+`
+
+export const StyledNavLink = styled(NavLink)`
+    text-decoration: none;
+    color:white;
+
+    &.active{
+        text-decoration: underline;
+        text-underline-offset: 0.5rem;
+        text-decoration-thickness: 0.2rem;
+        border-bottom-color: ${({ theme }) => theme.colors.white};
     }
 `
