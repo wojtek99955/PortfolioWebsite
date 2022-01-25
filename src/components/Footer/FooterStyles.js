@@ -11,6 +11,8 @@ export const StyledFooter = styled.footer`
 
 export const FooterContainer = styled.div`
     margin: 0 1rem;
+    max-width: 1300px;
+    margin:auto;
     
 
     @media ${device.tablet}{
