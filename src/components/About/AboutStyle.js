@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 import { SectionTittle } from '../Atoms/SectionTittle';
 import { device } from '../../assets/device';
-import img from "../photos/portfolio-img.jpg";
+import img from '../../assets/img/ja.jpg';
 import { NavLink } from "react-router-dom";
 
 export const StyledSection = styled.section`
-background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.basePurple};
+background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.white};
 padding-bottom:4rem ;
 scroll-behavior: smooth;
 
 `
 
 export const Container = styled.div`
-    color: ${({ theme }) => theme.colors.basePurple};
     max-width: 1100px;
     margin:auto;
 `
@@ -48,7 +47,7 @@ export const DescriptionContainer = styled.div`
     p{
         line-height: 1.5rem;
         font-size: ${({ theme }) => theme.fontSize.s};
-        color: ${({ theme }) => theme.colors.white};
+        color: ${({ theme }) => theme.colors.grey};
         text-align: center;
         margin-top: 2rem;
 
@@ -58,8 +57,8 @@ export const DescriptionContainer = styled.div`
     }
     button{
         align-self:center;
-        background-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.white};
-        color: ${({ theme, toggle }) => toggle ? theme.colors.white : theme.colors.basePurple};
+        background-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
+        color: ${({ theme }) => theme.colors.white};
 
         @media ${device.tablet}{
             align-self: start;
@@ -75,8 +74,11 @@ export const DescriptionContainer = styled.div`
 `
 
 export const StyledSectionTittle = styled(SectionTittle)`
-    h3, h2{
-        color:white;
+    h2{
+        color: ${({ theme, toggle }) => toggle ? "white" : "black"};
+    }
+    h3{
+        color: ${({ theme }) => theme.colors.grey};
     }
 `
 
@@ -84,6 +86,7 @@ export const LinksContainer = styled.div`
 display:flex;
 gap:1rem;
 justify-content:center;
+margin-top:2rem;
 
 @media ${device.tablet}{
     justify-content:start;
@@ -92,12 +95,14 @@ justify-content:center;
 
 export const StyledNavLink = styled(NavLink)`
     text-decoration: none;
-    color:white;
+    color:${({ theme, toggle }) => toggle ? "white" : "black"};
+    font-size: 1.3rem;
 
     &.active{
         text-decoration: underline;
         text-underline-offset: 0.5rem;
         text-decoration-thickness: 0.2rem;
-        border-bottom-color: ${({ theme }) => theme.colors.white};
+        text-decoration-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
+
     }
 `

@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from 'react';
 import "aos/dist/aos.css";
 import Aos from 'aos';
 import {
-    StyledHeader, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
+    StyledH1, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
     GitHubIcon, LinkInIcon, Socials, MainSection, StyledSendIcon, SendButton, ImgWrapper
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
@@ -33,7 +33,7 @@ export default function Opening() {
                     </Img>
 
                     <MainSection>
-                        <StyledHeader big toggle={context.toggle}>Hi, I'm Wojtek</StyledHeader>
+                        <StyledH1 big toggle={context.toggle}>Hi, I'm Wojtek</StyledH1>
                         <StyledH2 toggle={context.toggle}>
                             <Typewriter
                                 cursorClassName={{ "background-color": "green" }}

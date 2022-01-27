@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import { BsMouse } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
 import { FiLinkedin } from 'react-icons/fi';
-import mainimg from '../photos/graph1.png';
 import { device } from '../../assets/device';
 import { BiSend } from 'react-icons/bi';
 import { Link } from "react-scroll";
 import bgr from '../../assets/img/bgr.svg';
 
 
-export const StyledHeader = styled.h1`
+export const StyledH1 = styled.h1`
     font-size: ${({ theme }) => theme.fontSize.l};
     margin-bottom:1rem;
     color: black;
@@ -56,12 +55,13 @@ export const Img = styled.div`
 
     &::before{
         content:"";
-        width:600px;
-        height:600px;
+        width:200px;
+        height:200px;
         bottom:-5rem;
         background-image: url(${bgr});
         background-repeat: no-repeat;
         position:absolute;
+        display: none;
     }
 
     @media ${device.tablet}{
@@ -137,7 +137,11 @@ export const Scroll = styled.div`
     animation-iteration-count:infinite;
     animation-direction:alternate;
     animation-duration: 1500ms;
-    grid-column: 2/3;
+    grid-column: 1/2;
+
+    @media ${device.tablet}{
+        grid-column:2/3;
+    }
 
     @keyframes infinite-box{
         from{

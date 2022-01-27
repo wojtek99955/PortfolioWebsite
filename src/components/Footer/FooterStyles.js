@@ -10,19 +10,18 @@ export const StyledFooter = styled.footer`
 `
 
 export const FooterContainer = styled.div`
-    margin: 0 1rem;
+    padding: 0 1rem;
     max-width: 1300px;
     margin:auto;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 
     @media ${device.tablet}{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    @media ${device.laptop}{
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-items: center;
+        align-items: flex-start;
+        flex-direction: row;
+        justify-content: space-between;
     }
 `
 
@@ -40,12 +39,12 @@ export const PagesContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+    align-items: center; 
 
     a{
         text-decoration  : none;
         color:white;
-        margin-bottom: .8rem;
-        align-self: flex-start;
+        margin-bottom: 1.5rem;
         font-size: ${({ theme }) => theme.fontSize.s};
 
         &:hover{

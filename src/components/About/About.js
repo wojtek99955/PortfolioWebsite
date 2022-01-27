@@ -19,16 +19,16 @@ export default function About() {
     return (
         <StyledSection id="about" toggle={context.toggle}>
             <Container>
-                <StyledSectionTittle data-aos="fade-right">
+                <StyledSectionTittle toggle={context.toggle} data-aos="fade-right">
                     <h2>About Me</h2>
                     <h3>My introduction</h3>
                 </StyledSectionTittle>
                 <AboutContainer data-aos="fade-right">
                     <Image />
                     <DescriptionContainer toggle={context.toggle}>
-                        <LinksContainer>
-                            <StyledNavLink to="/about/life"> Life</StyledNavLink>
-                            <StyledNavLink to="/about/education"> Education </StyledNavLink>
+                        <LinksContainer >
+                            <StyledNavLink toggle={context.toggle} to="/about/life"> Life</StyledNavLink>
+                            <StyledNavLink toggle={context.toggle} to="/about/education"> Education </StyledNavLink>
                         </LinksContainer>
                         <Routes>
                             <Route path="/about/life" element={<Life />} />

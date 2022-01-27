@@ -185,5 +185,5 @@ export const LocationIcon = styled(HiOutlineLocationMarker)`
 
 export const SubmitMessage = styled.div`
     margin-top: 1rem;
-    color: ${({ toggle, theme }) => toggle ? theme.colors.white : theme.colors.white};
+    color: ${({ toggle, theme }) => toggle ? theme.colors.white : theme.colors.grey};
 `
