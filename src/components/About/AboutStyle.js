@@ -98,4 +98,5 @@ export const StyledH3 = styled.h3`
         text-decoration-thickness: 0.2rem;
         text-decoration-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
         cursor: pointer;
+        color: ${({ context }) => context ? "white" : "black"};
 `

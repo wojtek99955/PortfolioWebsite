@@ -21,9 +21,10 @@ export default function About() {
     }
 
     const [selectedTab, setSelectedTab] = useState(0);
-    console.log("selected" + selectedTab);
+
 
     const context = useContext(SwitchContext);
+
     return (
         <StyledSection id="about" toggle={context.toggle}>
             <Container>
@@ -38,6 +39,7 @@ export default function About() {
                             {data.map(({ name }, index) => {
                                 return (
                                     <StyledH3
+                                        context={context.toggle}
                                         isSelected={selectedTab === index}
                                         key={index}
                                         onClick={() => {
