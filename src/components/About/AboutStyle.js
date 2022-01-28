@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { SectionTittle } from '../Atoms/SectionTittle';
 import { device } from '../../assets/device';
 import img from '../../assets/img/ja.jpg';
-import { NavLink } from "react-router-dom";
 
 export const StyledSection = styled.section`
 background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.white};
@@ -93,16 +92,10 @@ margin-top:2rem;
 }
 `
 
-export const StyledNavLink = styled(NavLink)`
-    text-decoration: none;
-    color:${({ theme, toggle }) => toggle ? "white" : "black"};
-    font-size: 1.3rem;
-
-    &.active{
-        text-decoration: underline;
+export const StyledH3 = styled.h3`
+        text-decoration: ${({ isSelected }) => isSelected ? "underline" : "none"};
         text-underline-offset: 0.5rem;
         text-decoration-thickness: 0.2rem;
         text-decoration-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
-
-    }
+        cursor: pointer;
 `

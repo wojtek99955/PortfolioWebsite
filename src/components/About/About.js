@@ -1,19 +1,27 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { FiDownload } from 'react-icons/fi';
 import Aos from 'aos';
 import "aos/dist/aos.css";
 import { SwitchContext } from '../../App';
 import { StyledButton } from '../Opening/OpeningStyles';
-import { StyledSection, Container, AboutContainer, Image, DescriptionContainer, StyledSectionTittle, Button, LinksContainer, StyledNavLink } from './AboutStyle';
-import { Routes, Route } from "react-router-dom";
-import Life from './Routes/Life';
-import Education from './Routes/Education';
+import { StyledSection, Container, AboutContainer, Image, DescriptionContainer, StyledSectionTittle, LinksContainer, StyledH3 } from './AboutStyle';
+import { data } from './data';
 
 export default function About() {
 
     useEffect(() => {
         Aos.init({ duration: 1000 })
-    }, [])
+    }, []);
+
+    const [Tab, setTab] = useState(data[0]);
+
+    const handleChangeTab = (name) => {
+        let tab = data.filter((t) => t.name === name)[0];
+        setTab(tab);
+    }
+
+    const [selectedTab, setSelectedTab] = useState(0);
+    console.log("selected" + selectedTab);
 
     const context = useContext(SwitchContext);
     return (
@@ -27,17 +35,24 @@ export default function About() {
                     <Image />
                     <DescriptionContainer toggle={context.toggle}>
                         <LinksContainer >
-                            <StyledNavLink toggle={context.toggle} to="/about/life"> Life</StyledNavLink>
-                            <StyledNavLink toggle={context.toggle} to="/about/education"> Education </StyledNavLink>
+                            {data.map(({ name }, index) => {
+                                return (
+                                    <StyledH3
+                                        isSelected={selectedTab === index}
+                                        key={index}
+                                        onClick={() => {
+                                            handleChangeTab(name);
+                                            setSelectedTab(index)
+                                        }}>{name}
+                                    </StyledH3>
+                                )
+                            })}
                         </LinksContainer>
-                        <Routes>
-                            <Route path="/about/life" element={<Life />} />
-                            <Route path="/about/education" element={<Education />} />
-                        </Routes>
+                        <p>{Tab.text}</p>
                         <StyledButton>Download CV<i><FiDownload /></i></StyledButton>
                     </DescriptionContainer>
                 </AboutContainer>
             </Container>
-        </StyledSection>
+        </StyledSection >
     )
 }

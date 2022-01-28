@@ -20,6 +20,10 @@ export const StyledH1 = styled.h1`
     @media ${device.laptop}{
         font-size: ${({ theme }) => theme.fontSize.xl};
     }
+
+    span{
+        color: ${({ theme }) => theme.colors.basePurple};
+    }
 `
 
 export const StyledH2 = styled.h2`

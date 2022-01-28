@@ -33,7 +33,7 @@ export default function Opening() {
                     </Img>
 
                     <MainSection>
-                        <StyledH1 big toggle={context.toggle}>Hi, I'm Wojtek</StyledH1>
+                        <StyledH1 big toggle={context.toggle}><span>Hi,</span> I'm Wojtek</StyledH1>
                         <StyledH2 toggle={context.toggle}>
                             <Typewriter
                                 cursorClassName={{ "background-color": "green" }}
