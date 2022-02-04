@@ -19,8 +19,8 @@ function HireMe() {
 
     return (
         <HireSection toggle={context.toggle}>
-            <HireWrapper>
-                <HireContainer toggle={context.toggle} data-aos="fade-right">
+            <HireWrapper data-aos="fade-right">
+                <HireContainer toggle={context.toggle}>
                     <h2>Hire Me!</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing<br /> elit. Perspiciatis, natus ea est rerum praesentium totam.</p>
                     <Link to="contact"><button>Contact Me<i><BiSend /></i></button></Link>
