@@ -4,7 +4,7 @@ import Aos from 'aos';
 import "aos/dist/aos.css";
 import { SwitchContext } from '../../App';
 import { StyledButton } from '../Opening/OpeningStyles';
-import { StyledSection, Container, AboutContainer, Image, DescriptionContainer, StyledSectionTittle, LinksContainer, StyledH3 } from './AboutStyle';
+import { StyledSection, Container, AboutContainer, Image, DescriptionContainer, StyledSectionTittle, LinksContainer, StyledH3, Icon, Icon2 } from './AboutStyle';
 import { data } from './data';
 
 export default function About() {
@@ -35,7 +35,9 @@ export default function About() {
                     </div>
                 </StyledSectionTittle>
                 <AboutContainer data-aos="fade-right">
+
                     <Image />
+
                     <DescriptionContainer toggle={context.toggle}>
                         <LinksContainer >
                             {data.map(({ name }, index) => {

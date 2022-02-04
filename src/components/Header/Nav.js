@@ -11,7 +11,7 @@ const StyledNav = styled.nav`
 display: flex;
 justify-content: space-between;
 align-items: center;
-max-width: 1100px;
+max-width: 1300px;
 margin:auto;
 align-items: center;
 padding: 0.6rem 0; // zobacz tu 

@@ -7,49 +7,68 @@ export const StyledSection = styled.section`
 background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.white};
 padding-bottom:4rem ;
 scroll-behavior: smooth;
-
 `
 
 export const Container = styled.div`
-    max-width: 1100px;
+    max-width: 1300px;
     margin:auto;
 `
 
 export const AboutContainer = styled.div`
 display: grid;
-grid-template-columns: 1fr 1fr;
-width: 90%;
+grid-template-columns: 1fr;
+width: 80%;
 margin:auto;
-align-items: center;
-
-@media (max-width: 720px){
-    grid-template-columns: 1fr;
+@media ${device.tablet}{
+    grid-template-columns: 1fr 1fr;
 }
-
 `
 export const Image = styled.div`
 background-image: url(${img});
 background-size: cover;
 background-repeat: no-repeat;
-border-radius: 10px;
-width:270px;
-height:220px;
-margin:auto;
+border-radius: 50%;
+width:12rem;
+height:12rem;
 background-position: center;
-
+position: relative;
+margin: auto;
+@media ${device.tablet}{
+    margin:0;
+    align-self:center;
+}
+@media ${device.laptop}{
+    width:16rem;
+    height:16rem;
+    justify-self: flex-start;
+}
+&::after{
+    content: "";
+    width:12rem;
+    height:12rem;
+    background-color: #c7c0f1;
+    border-radius: 50%;
+    display: block;
+    position:absolute;
+    z-index: -2;
+    left:40px;
+    top:30px;
+    @media ${device.laptop}{
+        width:16rem;
+        height:16rem;
+    }
+}
 `
 export const DescriptionContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap:3rem; 
-
     p{
         line-height: 1.5rem;
         font-size: ${({ theme }) => theme.fontSize.s};
         color: ${({ theme }) => theme.colors.grey};
         text-align: center;
         margin-top: 2rem;
-
         @media ${device.tablet}{
             text-align: start;
         }
@@ -58,18 +77,15 @@ export const DescriptionContainer = styled.div`
         align-self:center;
         background-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
         color: ${({ theme }) => theme.colors.white};
-
         @media ${device.tablet}{
             align-self: start;
         }
-
         i{
             vertical-align: middle;
             padding-left: 0.5rem;
             font-size: 1.2rem;
         }
     }
-
 `
 
 export const StyledSectionTittle = styled(SectionTittle)`
@@ -86,9 +102,10 @@ display:flex;
 gap:1rem;
 justify-content:center;
 margin-top:2rem;
-
+padding-top:2rem;
 @media ${device.tablet}{
     justify-content:start;
+    padding-top:0;
 }
 `
 
