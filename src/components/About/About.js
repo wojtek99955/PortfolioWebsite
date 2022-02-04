@@ -28,9 +28,11 @@ export default function About() {
     return (
         <StyledSection id="about" toggle={context.toggle}>
             <Container>
-                <StyledSectionTittle toggle={context.toggle} data-aos="fade-right">
-                    <h2>About Me</h2>
-                    <h3>My introduction</h3>
+                <StyledSectionTittle toggle={context.toggle}>
+                    <div data-aos="fade-down">
+                        <h2>About Me</h2>
+                        <h3>My introduction</h3>
+                    </div>
                 </StyledSectionTittle>
                 <AboutContainer data-aos="fade-right">
                     <Image />

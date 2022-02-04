@@ -29,7 +29,7 @@ div{
     
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({toggle}) => toggle? "white" : "black"};
+    background-color: ${({ toggle }) => toggle ? "white" : "black"};
     margin-bottom:7px;
     transform-origin: 1px;
     transition: all 0.3s linear;
@@ -50,26 +50,25 @@ div{
 }
 `;
 
-export default function Hamburger({navBar}) {
+export default function Hamburger({ navBar }) {
 
-    const [open, setOpen] = useState(false)
-    const context = useContext(SwitchContext);
+  const [open, setOpen] = useState(false)
+  const context = useContext(SwitchContext);
 
-    const close = (e) =>{
-      setOpen(false);
-      e.stopPropagation()
-    };
-  
-    return (
-        <>
-        <StyledHamburger toggle={context.toggle} open={open} onClick={()=>setOpen(!open)}>
-            <div></div>
-            <div></div>
-            <div></div>
-            
-        </StyledHamburger>
-        <NavMobile open={open} setOpen={setOpen} close={close} />
-        </>
+  const close = (e) => {
+    setOpen(false);
+    e.stopPropagation()
+  };
 
-    )
+  return (
+    <>
+      <StyledHamburger toggle={context.toggle} open={open} onClick={() => setOpen(!open)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </StyledHamburger>
+      <NavMobile open={open} setOpen={setOpen} close={close} />
+    </>
+
+  )
 }
