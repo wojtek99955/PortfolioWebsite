@@ -45,7 +45,7 @@ export default function Opening() {
                             />
                         </StyledH2>
                         <StyledPar toggle={context.toggle}>
-                            High Level experience in web development knowledge,
+                            High Level experience in web development <br /> knowledge,
                             producing quality work
                         </StyledPar>
                         <SendButton to="contact">

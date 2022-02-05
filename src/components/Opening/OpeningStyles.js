@@ -76,7 +76,7 @@ export const Img = styled.div`
     }
     @media ${device.laptop}{
         height: 350px;
-        width: 450px;
+        width: 550px;
     }
 
     img{
@@ -117,7 +117,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 height:100vh;
-max-width: 1100px;
+max-width: 1300px;
 margin:auto;
 
    @media ${device.mobileS}{
@@ -207,9 +207,6 @@ export const StyledWrapper = styled.div`
         grid-template-columns: 50px 1fr 1fr;
         width:90%;
         
-    }
-    @media ${device.laptop}{
-        width:80%;
     }
 `
 
