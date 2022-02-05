@@ -15,9 +15,7 @@ export const HireWrapper = styled.div`
 `
 
 export const HireContainer = styled.div`
-    background-color: ${({ theme, toggle }) => toggle ? theme.colors.darkMode : theme.colors.basePurple};
-    width:85%;
-    border-radius: 15px;
+    width:100%;
     margin: auto;
     background: url(${desk});
     background-size: cover;
@@ -25,7 +23,8 @@ export const HireContainer = styled.div`
     position:relative;
     z-index: 1;
     @media ${device.tablet}{
-        background-color: ${({ theme, toggle }) => toggle ? "#0E0E1C" : theme.colors.basePurple};
+        width:85%;
+        border-radius: 15px;
     }
     h2{
         padding:2rem;

@@ -3,12 +3,11 @@ import "aos/dist/aos.css";
 import Aos from 'aos';
 import {
     StyledH1, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
-    GitHubIcon, LinkInIcon, Socials, MainSection, StyledSendIcon, SendButton, ImgWrapper
+    GitHubIcon, LinkInIcon, Socials, MainSection, StyledSendIcon, SendButton,
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
 import Typewriter from 'typewriter-effect';
 import img from '../../assets/img/ja.jpg';
-import img2 from '../../assets/img/jablack.jpg'
 import img3 from '../../assets/img/ja3.jpg';
 
 export default function Opening() {
