@@ -63,6 +63,12 @@ export const DescriptionContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap:3rem; 
+    align-items:center;
+
+    @media ${device.tablet}{
+        align-items: flex-start;
+    }
+
     p{
         line-height: 1.5rem;
         font-size: ${({ theme }) => theme.fontSize.s};
@@ -83,6 +89,22 @@ export const DescriptionContainer = styled.div`
             vertical-align: middle;
             padding-left: 0.5rem;
             font-size: 1.2rem;
+            color: white;
+            animation: ${({ hovered }) => hovered ? "900ms ease-in-out 0s infinite normal none running download" : "none"} ;
+            position:relative;
+
+            @keyframes download{
+
+                0%{
+                    top: 0;
+                    opacity: 1;
+                }
+                100%{
+                    top:0.5rem;
+                    opacity: 0;
+                }
+    }
+
         }
         a{
             text-decoration: none;

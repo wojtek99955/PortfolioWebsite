@@ -4,7 +4,7 @@ import Aos from 'aos';
 import "aos/dist/aos.css";
 import { SwitchContext } from '../../App';
 import { StyledButton } from '../Opening/OpeningStyles';
-import { StyledSection, Container, AboutContainer, Image, DescriptionContainer, StyledSectionTittle, LinksContainer, StyledH3, Icon, Icon2 } from './AboutStyle';
+import { StyledSection, Container, AboutContainer, Image, DescriptionContainer, StyledSectionTittle, LinksContainer, StyledH3 } from './AboutStyle';
 import { data } from './data';
 
 export default function About() {
@@ -22,6 +22,9 @@ export default function About() {
 
     const [selectedTab, setSelectedTab] = useState(0);
 
+    const [isHovered, setIsHovered] = useState(false);
+    console.log(isHovered);
+
 
     const context = useContext(SwitchContext);
 
@@ -38,7 +41,7 @@ export default function About() {
 
                     <Image />
 
-                    <DescriptionContainer toggle={context.toggle}>
+                    <DescriptionContainer hovered={isHovered} toggle={context.toggle}>
                         <LinksContainer >
                             {data.map(({ name }, index) => {
                                 return (
@@ -55,8 +58,8 @@ export default function About() {
                             })}
                         </LinksContainer>
                         <p>{Tab.text}</p>
-                        <a href="/CV.pdf" target="_blank" download="/CV.pdf">
-                            <StyledButton> Download CV<i><FiDownload /></i></StyledButton>
+                        <a href="/CV.pdf" download="/CV.pdf" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                            <StyledButton> Download CV<i ><FiDownload /></i></StyledButton>
                         </a>
                     </DescriptionContainer>
                 </AboutContainer>
