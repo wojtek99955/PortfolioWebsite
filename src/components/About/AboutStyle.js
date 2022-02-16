@@ -76,7 +76,6 @@ export const DescriptionContainer = styled.div`
     button{
         align-self:center;
         background-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
-        color: ${({ theme }) => theme.colors.white};
         @media ${device.tablet}{
             align-self: start;
         }
@@ -84,6 +83,10 @@ export const DescriptionContainer = styled.div`
             vertical-align: middle;
             padding-left: 0.5rem;
             font-size: 1.2rem;
+        }
+        a{
+            text-decoration: none;
+            color: ${({ theme }) => theme.colors.white};
         }
     }
 `

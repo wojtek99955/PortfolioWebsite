@@ -55,7 +55,9 @@ export default function About() {
                             })}
                         </LinksContainer>
                         <p>{Tab.text}</p>
-                        <StyledButton>Download CV<i><FiDownload /></i></StyledButton>
+                        <a href="/CV.pdf" target="_blank" download="/CV.pdf">
+                            <StyledButton> Download CV<i><FiDownload /></i></StyledButton>
+                        </a>
                     </DescriptionContainer>
                 </AboutContainer>
             </Container>

@@ -5,20 +5,20 @@ export const skills = [
 
     },
     {
-        id:"CSS",
-        perc:85,
+        id: "CSS",
+        perc: 85,
     },
     {
-        id:"JavaScript",
+        id: "JavaScript",
         perc: 75,
     },
     {
-        id:"SASS",
+        id: "SASS",
         perc: 80,
     },
     {
-        id:"React",
-        perc:85,
+        id: "React",
+        perc: 85,
     }
 ];
 
@@ -28,7 +28,7 @@ export const designSkills = [
         perc: 50,
     },
     {
-        id:"Figma",
-        perc:60,
+        id: "Figma",
+        perc: 60,
     }
 ]

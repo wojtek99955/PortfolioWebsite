@@ -5,7 +5,7 @@ import { FiLinkedin } from 'react-icons/fi';
 import { device } from '../../assets/device';
 import { BiSend } from 'react-icons/bi';
 import { Link } from "react-scroll";
-import bgr from '../../assets/img/bgr.svg';
+import bgr from '../../assets/img/main-bgr.svg';
 
 
 export const StyledH1 = styled.h1`
@@ -51,32 +51,45 @@ export const Img = styled.div`
 
     display: flex;
     align-items: center;
-    width:350px;
-    height: 350px;
+    width:13rem;
+    height: 13rem;
     justify-self: center;
     position:relative;
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
+    position: relative;
+    z-index:1;
 
     &::before{
         content:"";
-        width:200px;
-        height:200px;
-        bottom:-5rem;
+        width:12rem;
+        height:12rem;
         background-image: url(${bgr});
         background-repeat: no-repeat;
         position:absolute;
-        display: none;
+        z-index:0;
+        color:green;
+        display: block;
+
+        @media ${device.tablet}{
+            width: 17rem;
+            height: 17rem;
+        }
+        @media ${device.laptop}{
+            height: 23rem;
+            width: 23rem;
+        }
     }
 
     @media ${device.tablet}{
         grid-column: 3/4;
-        height: 320px;
-        width:400px;
+        height: 17rem;
+        width:19rem;
+        height:19rem;
 
     }
     @media ${device.laptop}{
-        height: 350px;
-        width: 550px;
+        height: 25rem;
+        width: 25rem;
     }
 
     img{
