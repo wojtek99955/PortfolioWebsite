@@ -1,12 +1,12 @@
 export const data = [
     {
         name: "Life",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iure eius eveniet unde itaque accusamus vero. Minima qui culpa eaque, commodi ad at voluptatem enim!",
+        text: "I am a frontend developer based in Poznań, Poland. My web development journey has started since I've created my first company's website.  ",
         active: true,
     },
     {
         name: "Education",
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iure eius eveniet unde itaque accusamus vero. Commodi ad at voluptatem enim!",
+        text: "Having spent many hours of self-learning I decided to sing up for a JavaScript developer bootcamp by Coders Lab.  ",
         active: false,
 
     }

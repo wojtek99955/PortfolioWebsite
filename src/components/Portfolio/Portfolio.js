@@ -2,12 +2,12 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { StyledButton } from '../Opening/OpeningStyles';
-import images from '../../images';
+import projects from '../../projects';
 import "aos/dist/aos.css";
 import { useEffect, useContext } from 'react';
 import Aos from 'aos';
 import { SwitchContext } from '../../App';
-import { Section, StyledContainer, StyledItem, StyledSlider, NextIcon, PrevIcon } from './PortfolioStyles';
+import { Section, StyledContainer, StyledItem, StyledSlider, NextIcon, PrevIcon, DescriptionContainer, CheckmarkIcon } from './PortfolioStyles';
 import { SectionTittle } from "../Atoms/SectionTittle";
 
 
@@ -72,13 +72,21 @@ export default function Portfolio() {
           <h3>Most recent work</h3>
         </SectionTittle>
         <StyledSlider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} {...settings}>
-          {images.map((item, id) => {
+          {projects.map((item, id) => {
             return <StyledItem>
               <img src={item.src} alt="project-preview" />
-              {item.description}
               <div className="overlay">
-                <p>{item.description}</p>
-                <p>{item.id}</p>
+                <DescriptionContainer>
+                  <h3>{item.name}</h3>
+                  <h4>Technologies</h4>
+                  {item.technologies.map((tech, id) => {
+                    return (
+                      <ul>
+                        <li> <CheckmarkIcon />{tech}</li>
+                      </ul>
+                    )
+                  })}
+                </DescriptionContainer>
                 <StyledButton>Demo</StyledButton>
               </div>
             </StyledItem>

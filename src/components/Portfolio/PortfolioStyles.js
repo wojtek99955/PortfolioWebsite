@@ -3,6 +3,7 @@ import { MdOutlineNavigateNext } from 'react-icons/md';
 import { MdOutlineNavigateBefore } from 'react-icons/md';
 import { device } from '../../assets/device';
 import Slider from "react-slick";
+import { MdDoneOutline } from 'react-icons/md';
 
 
 export const Section = styled.section`
@@ -76,6 +77,8 @@ export const StyledSlider = styled(Slider)`
 
 width: 85%;
 margin:auto;
+    display: flex;
+    gap:20px;
 .slick-prev::before, .slick-next::before{
     display: none;    
 }
@@ -89,10 +92,8 @@ margin:auto;
 
 }
 
-
-div{
-    display: flex;
-    gap:20px;
+.slick-slide>div {
+    padding: 0 0.8rem;
 }
 
 .dotsClass{
@@ -128,4 +129,35 @@ export const StyledButton = styled.button`
 
 `
 
+export const DescriptionContainer = styled.div`
 
+    h3{
+        margin-bottom:1.2rem;
+        color: white;
+        font-size: 1.3rem;
+    }
+    h4{
+        color:white;
+        margin-bottom: 1rem;
+    }
+    ul{
+        padding-left:1rem;
+        list-style: none;
+    }
+    li{
+        color:white;
+        font-size: 0.75rem;
+        display: flex;
+        align-items:center;
+        margin-bottom: 0.3rem;
+    }
+
+`;
+
+
+export const CheckmarkIcon = styled(MdDoneOutline)`
+
+    color: ${({ theme }) => theme.colors.basePurple};
+    margin-right:0.5rem;
+    font-size: 1rem;
+`
