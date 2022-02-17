@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { StyledFooter, FooterContainer, LogoContainer, PagesContainer, SocialsContainer, GithubIcon, FacebookIcon, StyledLink } from "./FooterStyles";
+import { StyledFooter, FooterContainer, LogoContainer, PagesContainer, SocialsContainer, GithubIcon, LinkedInIcon, StyledLink, MessengerIcon } from "./FooterStyles";
 import { SwitchContext } from "../../App";
 import { animateScroll as scroll } from 'react-scroll';
 import logo2 from '../../assets/img/logowhite.png';
@@ -26,8 +26,10 @@ function Footer() {
                     <StyledLink to="contact">Contact Me</StyledLink>
                 </PagesContainer>
                 <SocialsContainer>
-                    <GithubIcon />
-                    <FacebookIcon />
+                    <a href="https://github.com/wojtek99955" target="_blank" rel="noreferrer"><GithubIcon /></a>
+                    <a href="https://m.me/wojtek.ksiazek.14" target="_blank" rel="noreferrer"><MessengerIcon /></a>
+                    <a href="https://www.linkedin.com/in/wojtek-ksi%C4%85%C5%BCek-8732b41a9" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+
                 </SocialsContainer>
             </FooterContainer>
         </StyledFooter>

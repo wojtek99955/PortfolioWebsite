@@ -5,6 +5,7 @@ import { FiLinkedin } from 'react-icons/fi';
 import { device } from '../../assets/device';
 import { BiSend } from 'react-icons/bi';
 import { Link } from "react-scroll";
+import { RiMessengerLine } from 'react-icons/ri';
 import bgr from '../../assets/img/main-bgr.svg';
 
 
@@ -55,7 +56,6 @@ export const Img = styled.div`
     height: 13rem;
     justify-self: center;
     position:relative;
-    /* padding-left: 2rem; */
     position: relative;
     z-index:1;
 
@@ -181,14 +181,19 @@ export const Section = styled.section`
     background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.white};
 `
 
-export const LinkInIcon = styled(FiLinkedin)`
-    width: 20px;
+export const LinkedInIcon = styled(FiLinkedin)`
+    font-size: 1rem;
     color: ${({ theme }) => theme.colors.basePurple};
     cursor: pointer;
 `
 
 export const GitHubIcon = styled(FiGithub)`
-    width:20px;
+    font-size:1rem;
+    color: ${({ theme }) => theme.colors.basePurple};
+    cursor: pointer;
+`
+export const MessengerIcon = styled(RiMessengerLine)`
+    font-size: 1rem;
     color: ${({ theme }) => theme.colors.basePurple};
     cursor: pointer;
 `

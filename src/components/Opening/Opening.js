@@ -3,11 +3,10 @@ import "aos/dist/aos.css";
 import Aos from 'aos';
 import {
     StyledH1, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
-    GitHubIcon, LinkInIcon, Socials, MainSection, StyledSendIcon, SendButton,
+    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton,
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
 import Typewriter from 'typewriter-effect';
-import img from '../../assets/img/ja.jpg';
 import img3 from '../../assets/img/ja3.jpg';
 
 export default function Opening() {
@@ -23,11 +22,12 @@ export default function Opening() {
             <StyledContainer >
                 <StyledWrapper data-aos="fade-up" data-aos-delay="600">
                     <Socials>
-                        <GitHubIcon />
-                        <LinkInIcon />
+                        <a href="https://github.com/wojtek99955" target="_blank" rel="noreferrer"><GitHubIcon /></a>
+                        <a href="https://m.me/wojtek.ksiazek.14" target="_blank" rel="noreferrer"><MessengerIcon /></a>
+                        <a href="https://www.linkedin.com/in/wojtek-ksi%C4%85%C5%BCek-8732b41a9" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
                     </Socials>
-                    <Img src={img}>
-                        <img src={img3} alt="" srcset="" />
+                    <Img>
+                        <img src={img3} alt="Wojtek" />
                     </Img>
                     <MainSection>
                         <StyledH1 big toggle={context.toggle}><span>Hi,</span> I'm Wojtek</StyledH1>

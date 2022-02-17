@@ -3,6 +3,8 @@ import { device } from '../../assets/device';
 import { FaGithub } from 'react-icons/fa';
 import { GrFacebookOption } from 'react-icons/gr';
 import { Link } from 'react-scroll';
+import { FaFacebookMessenger } from 'react-icons/fa';
+import { FiLinkedin } from 'react-icons/fi';
 
 export const StyledFooter = styled.footer`
     background-color: ${({ theme, toggle }) => toggle ? "#0E0E1C" : theme.colors.basePurple};
@@ -71,11 +73,25 @@ export const SocialsContainer = styled.div`
 export const GithubIcon = styled(FaGithub)`
     color: white;    
     cursor: pointer;
+    font-size:1rem;
 `
 
 export const FacebookIcon = styled(GrFacebookOption)`
     color:white;
-    cursor: pointer;    
+    cursor: pointer;
+    font-size:1rem;
+`
+
+export const MessengerIcon = styled(FaFacebookMessenger)`
+    color: white;
+    cursor: pointer;
+    font-size:1rem;
+`
+
+export const LinkedInIcon = styled(FiLinkedin)`
+    color: white;
+    cursor: pointer;
+    font-size:1rem;
 `
 export const StyledLink = styled(Link)`
     cursor: pointer;
