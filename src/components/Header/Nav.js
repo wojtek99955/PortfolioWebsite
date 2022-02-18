@@ -52,7 +52,7 @@ const Nav = () => {
         <StyledContainer toggle={context.toggle} >
             <StyledNav>
                 <StyledLogo onClick={scrollHome}>
-                    <img src={logo} alt="" srcset="" />
+                    <img src={logo} alt="logo" />
                 </StyledLogo>
 
 

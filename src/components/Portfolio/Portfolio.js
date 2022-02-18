@@ -15,7 +15,6 @@ import { SectionTittle } from "../Atoms/SectionTittle";
 
 
 const PreviousBtn = (props) => {
-  console.log(props);
   const { className, onClick } = props;
   return (
     <div className={className} onClick={onClick}>
@@ -52,7 +51,7 @@ export default function Portfolio() {
     autoplaySpeed: 2000,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 800,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -73,7 +72,7 @@ export default function Portfolio() {
         </SectionTittle>
         <StyledSlider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} {...settings}>
           {projects.map((item, id) => {
-            return <StyledItem>
+            return <StyledItem key={id}>
               <img src={item.src} alt="project-preview" />
               <div className="overlay">
                 <DescriptionContainer>
@@ -81,13 +80,15 @@ export default function Portfolio() {
                   <h4>Technologies</h4>
                   {item.technologies.map((tech, id) => {
                     return (
-                      <ul>
-                        <li> <CheckmarkIcon />{tech}</li>
+                      <ul key={id}>
+                        <li > <CheckmarkIcon />{tech}</li>
                       </ul>
                     )
                   })}
                 </DescriptionContainer>
-                <StyledButton>Demo</StyledButton>
+                <a href={item.link} target="_blank" rel="noreferrer">
+                  <StyledButton>Demo</StyledButton>
+                </a>
               </div>
             </StyledItem>
           })}

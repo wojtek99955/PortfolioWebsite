@@ -23,8 +23,6 @@ export default function About() {
     const [selectedTab, setSelectedTab] = useState(0);
 
     const [isHovered, setIsHovered] = useState(false);
-    console.log(isHovered);
-
 
     const context = useContext(SwitchContext);
 
@@ -38,9 +36,7 @@ export default function About() {
                     </div>
                 </StyledSectionTittle>
                 <AboutContainer data-aos="fade-right">
-
                     <Image />
-
                     <DescriptionContainer hovered={isHovered} toggle={context.toggle}>
                         <LinksContainer >
                             {data.map(({ name }, index) => {
