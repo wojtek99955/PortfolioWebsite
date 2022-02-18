@@ -66,8 +66,12 @@ export const Overlay = styled.div`
     width:100%;
     height:100%;
     z-index: 1;
-    border-radius: 15px;
+
+    @media ${device.tablet}{
+        border-radius: 15px;
+    }
 `
+
 
 export const ContentContainer = styled.div`
     z-index:2;
