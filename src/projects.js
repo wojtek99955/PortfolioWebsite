@@ -15,6 +15,7 @@ const projects = [
         src: "/img/screens/notatki.png",
         name: "Notes App",
         technologies: ["React", "Styled-Components", "Styled-Icons"],
+        link: "https://wojtekk-note-app.netlify.app/",
     },
     {
         src: "/img/screens/projekt-restauracji.png",

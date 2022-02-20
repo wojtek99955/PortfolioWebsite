@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./components/Header/Nav";
+import Nav from "./components/Header/Nav/Nav";
 import Opening from "./components/Opening/Opening";
 import GlobalStyle from "./assets/styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
