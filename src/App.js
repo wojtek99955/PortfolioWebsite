@@ -20,7 +20,7 @@ export const SwitchContext = React.createContext({});
 
 function App() {
 
-  const [toggle, setToogle] = useState(false);
+  const [toggle, setToogle] = useState(+false);
 
   const handleToggle = (e) => {
     setToogle(prev => !prev);
