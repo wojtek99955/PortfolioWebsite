@@ -80,14 +80,14 @@ function Contact() {
 
                     <form ref={formRef} onSubmit={sendEmail} data-aos="fade-up">
                         <FormRow>
-                            <input type="text" name="name" placeholder="Name"></input>
-                            <input type="text" name="lastname" placeholder="Last Name"></input>
+                            <input type="text" name="name" placeholder="Name" required></input>
+                            <input type="text" name="lastname" placeholder="Last Name" required></input>
                         </FormRow>
                         <FormRow>
-                            <input type="email" name="email" placeholder="E-mail"></input>
-                            <input type="tel" name="tel" placeholder="Phone"></input>
+                            <input type="email" name="email" placeholder="E-mail" required></input>
+                            <input type="tel" name="tel" placeholder="Phone" required></input>
                         </FormRow>
-                        <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
+                        <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
                         <StyledButton>Send Message<i><BiSend /></i></StyledButton>
                         {sent ? <SubmitMessage toggle={context.toggle}> Message sent successfully! </SubmitMessage> : null}
                     </form>
