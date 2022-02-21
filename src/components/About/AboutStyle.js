@@ -60,10 +60,12 @@ margin: auto;
 }
 `
 export const DescriptionContainer = styled.div`
+    margin:auto;
     display: flex;
     flex-direction: column;
     gap:3rem; 
     align-items:center;
+    width:80%;
 
     @media ${device.tablet}{
         align-items: flex-start;
@@ -141,4 +143,8 @@ export const StyledH3 = styled.h3`
         text-decoration-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
         cursor: pointer;
         color: ${({ context }) => context ? "white" : "black"};
+`
+
+export const Text = styled.div`
+    min-height:8rem;
 `

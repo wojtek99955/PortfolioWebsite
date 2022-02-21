@@ -4,7 +4,7 @@ import Aos from 'aos';
 import "aos/dist/aos.css";
 import { SwitchContext } from '../../App';
 import { StyledButton } from '../Opening/OpeningStyles';
-import { StyledSection, Container, AboutContainer, Image, DescriptionContainer, StyledSectionTittle, LinksContainer, StyledH3 } from './AboutStyle';
+import { StyledSection, Container, AboutContainer, Image, DescriptionContainer, StyledSectionTittle, LinksContainer, StyledH3, Text } from './AboutStyle';
 import { data } from './data';
 
 export default function About() {
@@ -53,7 +53,9 @@ export default function About() {
                                 )
                             })}
                         </LinksContainer>
-                        <p>{Tab.text}</p>
+                        <Text>
+                            <p>{Tab.text}</p>
+                        </Text>
                         <a href="/CV.pdf" download="/CV.pdf" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                             <StyledButton> Download CV<i ><FiDownload /></i></StyledButton>
                         </a>
