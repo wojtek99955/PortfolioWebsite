@@ -1,19 +1,11 @@
 import styled from 'styled-components';
+import { Link } from 'react-scroll';
 
 export const Ul = styled.ul`
 
   list-style: none;
   display: flex;
   gap: 2rem;
-
-  li {
-      color:${({ toggle }) => toggle ? "white" : "black"};
-
-    &:hover{
-      color: ${({ theme }) => theme.colors.basePurple};
-      cursor: pointer;
-    }
-  }
 
   @media (max-width: 768px) {
       flex-direction: column;
@@ -33,3 +25,16 @@ export const Ul = styled.ul`
         }
   }
 `;
+
+export const StyledLink = styled(Link)`
+  color:${({ toggle }) => toggle ? "white" : "black"};
+
+      &:hover{
+        cursor: pointer;
+        color: ${({ theme }) => theme.colors.basePurple};
+    }
+      &.active{
+        color: ${({ theme }) => theme.colors.basePurple};
+    }
+
+`
