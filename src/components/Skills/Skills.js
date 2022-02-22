@@ -69,9 +69,9 @@ function Skills() {
                             <DownIcon open={designOpen} />
                         </SkillTittle>
                         {
-                            designSkills.map((skills, id) => {
+                            designSkills.map((skills) => {
                                 return (
-                                    <Skill key={id} open={designOpen}>
+                                    <Skill key={skills.id} open={designOpen}>
                                         <SkillName toggle={context.toggle}>
                                             <h1>{skills.id}</h1>
                                             <span>{skills.perc}%</span>

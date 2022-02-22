@@ -66,10 +66,10 @@ export const DevSkills = styled.div`
 `
 
 export const Skill = styled.div`
-max-height: ${({ open }) => open ? "999px" : 0};
-overflow : ${({ open }) => open ? null : "hidden"};
+max-height: ${({ open }) => open ? "12rem" : 0};
+overflow : hidden;
 height: ${({ open }) => open ? "auto" : null};
-transition: ${({ open }) => open ? "all 0.5s cubic-bezier(1,0,1,0)" : "all .5s cubic-bezier(0,1,0,1)"};
+transition: 0.4s ease-in-out;
 
 `
 
