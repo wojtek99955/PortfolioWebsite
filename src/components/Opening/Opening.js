@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import Aos from 'aos';
 import {
     StyledH1, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
-    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton,
+    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, Icons, GitMergeIcon, CodeIcon, DevBoard, WindowDev, DevicesIcon,
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
 import Typewriter from 'typewriter-effect';
@@ -20,6 +20,13 @@ export default function Opening() {
     return (
         <Section id="home" toggle={context.toggle}>
             <StyledContainer >
+                <Icons>
+                    <GitMergeIcon />
+                    <CodeIcon />
+                    <DevBoard />
+                    <WindowDev />
+                    <DevicesIcon />
+                </Icons>
                 <StyledWrapper data-aos="fade-up" data-aos-delay="600">
                     <Socials>
                         <a href="https://github.com/wojtek99955" target="_blank" rel="noreferrer"><GitHubIcon /></a>

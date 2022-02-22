@@ -7,6 +7,11 @@ import { BiSend } from 'react-icons/bi';
 import { Link } from "react-scroll";
 import { RiMessengerLine } from 'react-icons/ri';
 import bgr from '../../assets/img/main-bgr.svg';
+import { HiOutlineCode } from 'react-icons/hi';
+import { GitMerge } from '@styled-icons/boxicons-regular/GitMerge';
+import { DeveloperBoard } from '@styled-icons/fluentui-system-regular/DeveloperBoard';
+import { WindowDevEdit } from '@styled-icons/fluentui-system-filled/WindowDevEdit';
+import { Devices } from '@styled-icons/boxicons-solid/Devices';
 
 
 export const StyledH1 = styled.h1`
@@ -132,6 +137,7 @@ align-items: center;
 height:100vh;
 max-width: 1300px;
 margin:auto;
+position:relative;
 
    @media ${device.mobileS}{
         padding:0 1rem;
@@ -178,7 +184,7 @@ export const Scroll = styled.div`
 
 
 export const Section = styled.section`
-    background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.white};
+    background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : "#f6f7fb"};
 `
 
 export const LinkedInIcon = styled(FiLinkedin)`
@@ -252,4 +258,71 @@ export const SendButton = styled(Link)`
         background: #8176c4;
     }
 
+`
+
+export const Icons = styled.div`
+    position:absolute;
+    height:100vh;
+    width:100%;
+    
+`
+
+export const GitMergeIcon = styled(GitMerge)`
+    width:3rem;
+    color:#dfdeee;
+    position: absolute;
+    top:20%;
+    left: 10%;
+    transform: rotate(50deg);
+`
+
+export const CodeIcon = styled(HiOutlineCode)`
+    font-size:5rem;
+    color:#dfdeee;
+    position: absolute;
+    top:65%;
+    left: 40%;
+    transform: rotate(30deg);
+    display:none;
+
+    @media ${device.tablet}{
+        display:block;
+    }
+`
+
+export const DevBoard = styled(DeveloperBoard)`
+    width:4rem;
+    color:#dfdeee;
+    position: absolute;
+    top:15%;
+    left: 70%;
+    transform: rotate(30deg);
+
+    @media ${device.tablet}{
+        left:80%;
+    }
+`
+export const WindowDev = styled(WindowDevEdit)`
+    width:3rem;
+    color:#dfdeee;
+    position: absolute;
+    top:28%;
+    left: 50%;
+    display:none;
+
+    @media ${device.tablet}{
+        display:block;
+    }
+`
+
+export const DevicesIcon = styled(Devices)`
+    width:3rem;
+    color:#dfdeee;
+    position: absolute;
+    top:68%;
+    left: 70%;
+
+    @media ${device.tablet}{
+        left:90%;
+    }
 `
