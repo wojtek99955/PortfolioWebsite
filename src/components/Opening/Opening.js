@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import Aos from 'aos';
 import {
     StyledH1, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
-    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, GitMergeIcon, CodeIcon, ParallaxContainer, ParallaxChild, DevBoard, WindowDev, DevicesIcon, Container
+    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, GitMergeIcon, CodeIcon, ParallaxContainer, ParallaxChild, DevBoard, WindowDev, DevicesIcon, DeviceHubIcon, Container
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
 import Typewriter from 'typewriter-effect';
@@ -25,6 +25,7 @@ export default function Opening() {
                         <GitMergeIcon />
                         <CodeIcon />
                         <DevBoard />
+                        <DeviceHubIcon />
                         <WindowDev />
                         <DevicesIcon />
                     </ParallaxChild>

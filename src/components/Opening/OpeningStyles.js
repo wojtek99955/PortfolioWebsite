@@ -13,6 +13,7 @@ import { DeveloperBoard } from '@styled-icons/fluentui-system-regular/DeveloperB
 import { WindowDevEdit } from '@styled-icons/fluentui-system-filled/WindowDevEdit';
 import { Devices } from '@styled-icons/boxicons-solid/Devices';
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+import { DeviceHub } from '@styled-icons/material-outlined/DeviceHub';
 
 
 
@@ -285,7 +286,7 @@ export const CodeIcon = styled(HiOutlineCode)`
     position: absolute;
     left: 45%;
     top: 45vh;
-    transform: rotate(30deg);
+    transform: rotate(15deg);
     display:none;
 
     @media ${device.tablet}{
@@ -294,15 +295,17 @@ export const CodeIcon = styled(HiOutlineCode)`
 `
 
 export const DevBoard = styled(DeveloperBoard)`
-    width:4rem;
+    width:2.5rem;
     color:#dfdeee;
     position: absolute;
-    top:25vh;
+    top:15vh;
     left: 70%;
     transform: rotate(30deg);
 
     @media ${device.tablet}{
+        top:25vh;
         left:80%;
+        width:4rem;
     }
 `
 export const WindowDev = styled(WindowDevEdit)`
@@ -319,15 +322,30 @@ export const WindowDev = styled(WindowDevEdit)`
 `
 
 export const DevicesIcon = styled(Devices)`
-    width:3rem;
+    width:2.5rem;
     color:#dfdeee;
     position: absolute;
     top:60vh;
-    left: 70%;
+    left: 80%;
 
     @media ${device.tablet}{
         left:90%;
+        width:3rem;
     }
+`
+
+export const DeviceHubIcon = styled(DeviceHub)`
+    width: 2.5rem;
+    color:#dfdeee;
+    position: absolute;
+    left: 55%;
+    top: 80vh;
+
+    @media ${device.tablet}{
+        top: 70vh;
+        width:3rem;
+    }
+
 `
 
 export const ParallaxContainer = styled(MouseParallaxContainer)`
