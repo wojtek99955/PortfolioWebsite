@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import Aos from 'aos';
 import {
     StyledH1, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
-    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, Icons, GitMergeIcon, CodeIcon, DevBoard, WindowDev, DevicesIcon,
+    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, GitMergeIcon, CodeIcon, ParallaxContainer, ParallaxChild, DevBoard, WindowDev, DevicesIcon
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
 import Typewriter from 'typewriter-effect';
@@ -18,52 +18,62 @@ export default function Opening() {
     const context = useContext(SwitchContext);
 
     return (
-        <Section id="home" toggle={context.toggle}>
-            <StyledContainer >
-                <Icons>
-                    <GitMergeIcon />
-                    <CodeIcon />
-                    <DevBoard />
-                    <WindowDev />
-                    <DevicesIcon />
-                </Icons>
-                <StyledWrapper data-aos="fade-up" data-aos-delay="600">
-                    <Socials>
-                        <a href="https://github.com/wojtek99955" target="_blank" rel="noreferrer"><GitHubIcon /></a>
-                        <a href="https://m.me/wojtek.ksiazek.14" target="_blank" rel="noreferrer"><MessengerIcon /></a>
-                        <a href="https://www.linkedin.com/in/wojtek-ksi%C4%85%C5%BCek-8732b41a9" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-                    </Socials>
-                    <Img>
-                        <img src={img3} alt="Wojtek" />
-                    </Img>
-                    <MainSection>
-                        <StyledH1 big toggle={context.toggle}><span>Hi,</span> I'm Wojtek</StyledH1>
-                        <StyledH2 toggle={context.toggle}>
-                            <Typewriter
-                                cursorClassName={{ "background-color": "green" }}
-                                options={{
-                                    delay: 220,
-                                }}
-                                onInit={(typewriter) => {
-                                    typewriter.typeString("Frontend Developer ")
-                                        .start()
-                                }}
-                            />
-                        </StyledH2>
-                        <StyledPar toggle={context.toggle}>
-                            A passionate frontend developer <br /> from Poland, producing quality work
-                        </StyledPar>
-                        <SendButton to="contact">
-                            Contact Me
-                            <StyledSendIcon />
-                        </SendButton>
-                    </MainSection>
-                    <Scroll>
-                        <Mouse />
-                        <p>Scroll down </p>
-                    </Scroll>
-                </StyledWrapper>
-            </StyledContainer>
-        </Section>
+        <>
+
+
+            <Section id="home" toggle={context.toggle} data-aos="fade-up" data-aos-delay="600">
+
+                <ParallaxContainer>
+                    <ParallaxChild factorX={0.03} factorY={0.05}>
+                        <GitMergeIcon />
+                        <CodeIcon />
+                        <DevBoard />
+                        <WindowDev />
+                        <DevicesIcon />
+
+                    </ParallaxChild>
+
+                    <StyledContainer >
+                        <StyledWrapper data-aos="fade-up" data-aos-delay="600">
+                            <Socials>
+                                <a href="https://github.com/wojtek99955" target="_blank" rel="noreferrer"><GitHubIcon /></a>
+                                <a href="https://m.me/wojtek.ksiazek.14" target="_blank" rel="noreferrer"><MessengerIcon /></a>
+                                <a href="https://www.linkedin.com/in/wojtek-ksi%C4%85%C5%BCek-8732b41a9" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
+                            </Socials>
+                            <Img>
+                                <img src={img3} alt="Wojtek" />
+                            </Img>
+                            <MainSection>
+                                <StyledH1 big toggle={context.toggle}><span>Hi,</span> I'm Wojtek</StyledH1>
+                                <StyledH2 toggle={context.toggle}>
+                                    <Typewriter
+                                        cursorClassName={{ "background-color": "green" }}
+                                        options={{
+                                            delay: 220,
+                                        }}
+                                        onInit={(typewriter) => {
+                                            typewriter.typeString("Frontend Developer ")
+                                                .start()
+                                        }}
+                                    />
+                                </StyledH2>
+                                <StyledPar toggle={context.toggle}>
+                                    A passionate frontend developer <br /> from Poland, producing quality work
+                                </StyledPar>
+                                <SendButton to="contact">
+                                    Contact Me
+                                    <StyledSendIcon />
+                                </SendButton>
+                            </MainSection>
+                            <Scroll>
+                                <Mouse />
+                                <p>Scroll down </p>
+                            </Scroll>
+                        </StyledWrapper>
+                    </StyledContainer>
+                </ParallaxContainer>
+            </Section>
+
+        </>
     )
 }

@@ -12,6 +12,8 @@ import { GitMerge } from '@styled-icons/boxicons-regular/GitMerge';
 import { DeveloperBoard } from '@styled-icons/fluentui-system-regular/DeveloperBoard';
 import { WindowDevEdit } from '@styled-icons/fluentui-system-filled/WindowDevEdit';
 import { Devices } from '@styled-icons/boxicons-solid/Devices';
+import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
+
 
 
 export const StyledH1 = styled.h1`
@@ -264,6 +266,7 @@ export const Icons = styled.div`
     position:absolute;
     height:100vh;
     width:100%;
+    z-index:5;
     
 `
 
@@ -271,8 +274,8 @@ export const GitMergeIcon = styled(GitMerge)`
     width:3rem;
     color:#dfdeee;
     position: absolute;
-    top:20%;
     left: 10%;
+    top: 20vh;
     transform: rotate(50deg);
 `
 
@@ -280,8 +283,8 @@ export const CodeIcon = styled(HiOutlineCode)`
     font-size:5rem;
     color:#dfdeee;
     position: absolute;
-    top:65%;
-    left: 40%;
+    left: 45%;
+    top: 45vh;
     transform: rotate(30deg);
     display:none;
 
@@ -294,7 +297,7 @@ export const DevBoard = styled(DeveloperBoard)`
     width:4rem;
     color:#dfdeee;
     position: absolute;
-    top:15%;
+    top:25vh;
     left: 70%;
     transform: rotate(30deg);
 
@@ -306,7 +309,7 @@ export const WindowDev = styled(WindowDevEdit)`
     width:3rem;
     color:#dfdeee;
     position: absolute;
-    top:28%;
+    top:15vh;
     left: 50%;
     display:none;
 
@@ -319,10 +322,18 @@ export const DevicesIcon = styled(Devices)`
     width:3rem;
     color:#dfdeee;
     position: absolute;
-    top:68%;
+    top:60vh;
     left: 70%;
 
     @media ${device.tablet}{
         left:90%;
     }
+`
+
+export const ParallaxContainer = styled(MouseParallaxContainer)`
+    max-width:1300px;
+    margin:auto;
+`
+
+export const ParallaxChild = styled(MouseParallaxChild)`
 `
