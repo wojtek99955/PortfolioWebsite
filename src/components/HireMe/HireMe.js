@@ -19,16 +19,15 @@ function HireMe() {
 
     return (
         <HireSection toggle={context.toggle}>
-            <HireWrapper data-aos="fade-right">
-                <HireContainer toggle={context.toggle}>
-                    <Overlay />
-                    <ContentContainer>
-                        <h2>Hire Me!</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing<br /> elit. Perspiciatis, natus ea est rerum praesentium totam.</p>
-                        <Link to="contact"><button>Contact Me<i><BiSend /></i></button></Link>
-                    </ContentContainer>
-                </HireContainer>
-            </HireWrapper>
+            <Overlay />
+            <HireContainer toggle={context.toggle}>
+
+                <ContentContainer>
+                    <h2>Hire Me!</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing<br /> elit. Perspiciatis, natus ea est rerum praesentium totam.</p>
+                    <button><Link to="contact">Contact Me<i><BiSend /></i></Link></button>
+                </ContentContainer>
+            </HireContainer>
         </HireSection>
     )
 }
