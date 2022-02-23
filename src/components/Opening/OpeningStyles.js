@@ -337,3 +337,7 @@ export const ParallaxContainer = styled(MouseParallaxContainer)`
 
 export const ParallaxChild = styled(MouseParallaxChild)`
 `
+
+export const Container = styled.div`
+
+`

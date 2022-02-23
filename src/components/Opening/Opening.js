@@ -3,7 +3,7 @@ import "aos/dist/aos.css";
 import Aos from 'aos';
 import {
     StyledH1, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
-    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, GitMergeIcon, CodeIcon, ParallaxContainer, ParallaxChild, DevBoard, WindowDev, DevicesIcon
+    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, GitMergeIcon, CodeIcon, ParallaxContainer, ParallaxChild, DevBoard, WindowDev, DevicesIcon, Container
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
 import Typewriter from 'typewriter-effect';
@@ -18,11 +18,8 @@ export default function Opening() {
     const context = useContext(SwitchContext);
 
     return (
-        <>
-
-
-            <Section id="home" toggle={context.toggle} data-aos="fade-up" data-aos-delay="600">
-
+        <Container data-aos="fade-up" data-aos-delay="600">
+            <Section id="home" toggle={context.toggle} >
                 <ParallaxContainer>
                     <ParallaxChild factorX={0.03} factorY={0.05}>
                         <GitMergeIcon />
@@ -30,11 +27,9 @@ export default function Opening() {
                         <DevBoard />
                         <WindowDev />
                         <DevicesIcon />
-
                     </ParallaxChild>
-
                     <StyledContainer >
-                        <StyledWrapper data-aos="fade-up" data-aos-delay="600">
+                        <StyledWrapper >
                             <Socials>
                                 <a href="https://github.com/wojtek99955" target="_blank" rel="noreferrer"><GitHubIcon /></a>
                                 <a href="https://m.me/wojtek.ksiazek.14" target="_blank" rel="noreferrer"><MessengerIcon /></a>
@@ -73,7 +68,6 @@ export default function Opening() {
                     </StyledContainer>
                 </ParallaxContainer>
             </Section>
-
-        </>
+        </Container>
     )
 }
