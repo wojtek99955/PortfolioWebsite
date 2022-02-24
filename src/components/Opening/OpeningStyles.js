@@ -282,7 +282,7 @@ export const GitMergeIcon = styled(GitMerge)`
 
 export const CodeIcon = styled(HiOutlineCode)`
     font-size:5rem;
-    color:#dfdeee;
+    color:#C7C0F1;
     position: absolute;
     left: 45%;
     top: 45vh;

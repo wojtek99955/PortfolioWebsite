@@ -11,6 +11,7 @@ import Contact from "./components/Contact/Contact";
 import HireMe from "./components/HireMe/HireMe";
 import { useState } from "react";
 import Skills from "./components/Skills/Skills";
+import ScrollTopBtn from "./components/ScrollTopBtn/ScrollTopBtn";
 
 
 
@@ -34,6 +35,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <SwitchContext.Provider value={{ toggle, handleToggle }}>
           <GlobalStyle />
+          <ScrollTopBtn />
           <Nav />
           <Opening />
           <About />
