@@ -86,6 +86,10 @@ export const Img = styled.div`
             height: 23rem;
             width: 23rem;
         }
+        @media ${device.laptopL}{
+            width:26rem;
+            height:26rem;
+        }
     }
 
     @media ${device.tablet}{
@@ -98,6 +102,10 @@ export const Img = styled.div`
     @media ${device.laptop}{
         height: 25rem;
         width: 25rem;
+    }
+    @media ${device.laptopL}{
+        width:30rem;
+        height:30rem;
     }
 
     img{
