@@ -34,7 +34,5 @@ background-color: ${({ toggle, scrolled, theme }) => {
         } else if (toggle && scrolled) {
             return "black"
         }
-
-
     }};
 `

@@ -84,8 +84,7 @@ margin:auto;
 }
 
 .slick-arrow.slick-prev, .slick-arrow.slick-next{
-    width:40px;
-    height:40px;
+    width:2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,11 +96,11 @@ margin:auto;
 }
 
 .dotsClass{
-    padding:24px;
+    padding:2rem;
 }
 
 .slick-dots li button::before{
-    font-size: 15px;
+    font-size: 1rem;
     color:${({ theme }) => theme.colors.basePurple};
 }
 
