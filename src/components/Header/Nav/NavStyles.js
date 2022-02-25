@@ -24,9 +24,17 @@ cursor:pointer;
  `
 
 export const StyledContainer = styled.div`
-box-shadow: 0px 11px 53px 0px rgba(48, 49, 57, 0.21);
-position: fixed;
+box-shadow: ${({ scrolled }) => scrolled ? "0px 11px 53px 0px rgba(48, 49, 57, 0.21)" : 0};
+position: ${({ scrolled }) => scrolled ? "fixed" : "absolute"};
 width:100%;
 z-index: 3;
-background-color: ${({ toggle }) => toggle ? "black" : "white"};
+background-color: ${({ toggle, scrolled, theme }) => {
+        if (!toggle && scrolled) {
+            return "#f6f7fb"
+        } else if (toggle && scrolled) {
+            return "black"
+        }
+
+
+    }};
 `

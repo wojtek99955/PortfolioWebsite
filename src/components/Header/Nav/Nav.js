@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Hamburger from "../Hamburger/Hamburger";
 import { SwitchContext } from "../../../App";
 import { animateScroll as scroll } from 'react-scroll';
@@ -15,8 +15,20 @@ const Nav = () => {
         scroll.scrollToTop()
     }
 
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > 300) {
+                setIsScrolled(true)
+            } else {
+                setIsScrolled(false);
+            }
+        })
+    }, []);
+
     return (
-        <StyledContainer toggle={context.toggle} >
+        <StyledContainer toggle={context.toggle} scrolled={isScrolled} >
             <StyledNav>
                 <StyledLogo onClick={scrollHome}>
                     <img src={logo} alt="logo" />
