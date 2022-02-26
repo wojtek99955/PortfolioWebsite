@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../../assets/device';
 
 export const StyledNav = styled.nav`
 display: flex;
@@ -7,7 +8,11 @@ align-items: center;
 max-width: 1300px;
 margin:auto;
 align-items: center;
-padding: 1.2rem 0;
+padding: 0.2rem 0;
+
+@media${device.tablet}{
+    padding:1.2rem;
+}
 `
 
 export const StyledLogo = styled.div`
