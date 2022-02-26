@@ -28,13 +28,39 @@ export const Ul = styled.ul`
 
 export const StyledLink = styled(Link)`
   color:${({ toggle }) => toggle ? "white" : "black"};
+  text-transform: uppercase;
+  position: relative;
 
-      &:hover{
-        cursor: pointer;
-        color: ${({ theme }) => theme.colors.basePurple};
+    &:hover{
+      cursor: pointer;
+      color: ${({ theme }) => theme.colors.basePurple};
     }
-      &.active{
-        color: ${({ theme }) => theme.colors.basePurple};
+    &.active{
+      color: ${({ theme }) => theme.colors.basePurple};
+
+      &::before{
+        content: "";
+        position:absolute;
+        width: 0.2rem;
+        background-color: ${({ theme }) => theme.colors.basePurple};
+        left: 50%;
+        top: -100%;
+        animation: active 400ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+
+      
     }
+    } 
+
+    @keyframes active{
+      0%{
+        height:0rem;
+      }
+      100%{
+        height: 1rem;
+      }
+    }
+  
 
 `

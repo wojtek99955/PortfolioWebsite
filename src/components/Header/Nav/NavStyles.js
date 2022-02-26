@@ -7,7 +7,7 @@ align-items: center;
 max-width: 1300px;
 margin:auto;
 align-items: center;
-padding: 0.6rem 0;
+padding: 1.2rem 0;
 `
 
 export const StyledLogo = styled.div`
