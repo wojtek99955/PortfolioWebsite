@@ -58,7 +58,7 @@ export default function Opening() {
                                 </StyledPar>
                                 <SendButton to="contact">
                                     Contact Me
-                                    <StyledSendIcon />
+                                    <i><StyledSendIcon /></i>
                                 </SendButton>
                             </MainSection>
                             <Scroll>

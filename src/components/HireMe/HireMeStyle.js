@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { device } from '../../assets/device';
 import desk from '../../assets/img/desk.jpg';
+import { Link } from 'react-scroll';
 
 export const HireSection = styled.section`
     background: url(${desk});
@@ -38,7 +38,6 @@ export const HireContainer = styled.div`
         background-color:${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.white};
         cursor:pointer;
 
-
         &:hover{
             box-shadow: 0px 0px 16px 0px rgba(66, 68, 90, 1);
         }
@@ -46,7 +45,6 @@ export const HireContainer = styled.div`
             background: #8176c4;
         }
         i{
-            vertical-align: middle;
             padding-left: 0.5rem;
             font-size: 1.2rem;
         }
@@ -71,3 +69,9 @@ export const ContentContainer = styled.div`
     flex-direction: column;
     align-items: center;
     `
+
+export const StyledLink = styled(Link)`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`

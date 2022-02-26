@@ -128,17 +128,16 @@ export const StyledButton = styled.button`
     cursor: pointer;
     margin-top: 1rem;
     right:0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 
 `
 
 export const StyledSendIcon = styled(BiSend)`
     font-size: 1.3rem;
-  color:white;
-  margin-left: .6rem;
-  vertical-align: middle;
-          align-items: flex-start;
-
-
+    color:white;
+    margin-left: .6rem;
 `
 
 export const StyledContainer = styled.div`
@@ -260,6 +259,7 @@ export const SendButton = styled(Link)`
     display: flex;
     width:11rem;
     justify-content: center;
+    align-items: center;
 
     &:hover{
         box-shadow: 0px 0px 16px 0px rgba(66, 68, 90, 1);

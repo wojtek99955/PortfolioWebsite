@@ -4,8 +4,7 @@ import "aos/dist/aos.css";
 import { useEffect, useContext } from 'react';
 import Aos from 'aos';
 import { SwitchContext } from '../../App';
-import { HireContainer, HireWrapper, HireSection, Overlay, ContentContainer } from './HireMeStyle';
-import { Link } from 'react-scroll';
+import { HireContainer, HireSection, Overlay, ContentContainer, StyledLink } from './HireMeStyle';
 
 
 
@@ -25,7 +24,7 @@ function HireMe() {
                 <ContentContainer>
                     <h2>Hire Me!</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing<br /> elit. Perspiciatis, natus ea est rerum praesentium totam.</p>
-                    <button><Link to="contact">Contact Me<i><BiSend /></i></Link></button>
+                    <button><StyledLink to="contact">Contact Me<i><BiSend /></i></StyledLink></button>
                 </ContentContainer>
             </HireContainer>
         </HireSection>
