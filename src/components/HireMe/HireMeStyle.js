@@ -20,6 +20,8 @@ export const HireContainer = styled.div`
     h2{
         padding:2rem 0;
         color: ${({ theme }) => theme.colors.white};
+        font-size: ${({ theme }) => theme.fontSize.xl};
+        font-weight: 400;
 
     }
     p{
