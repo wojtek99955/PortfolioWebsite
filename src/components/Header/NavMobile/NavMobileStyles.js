@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-scroll';
+import { device } from '../../../assets/device';
 
 export const Ul = styled.ul`
 
@@ -48,6 +49,12 @@ export const StyledLink = styled(Link)`
         animation: active 400ms;
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
+        display:none;
+
+        @media ${device.tablet}{
+          display: block;
+        }
+
 
       
     }
