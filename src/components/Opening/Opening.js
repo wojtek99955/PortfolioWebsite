@@ -7,7 +7,7 @@ import {
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
 import Typewriter from 'typewriter-effect';
-import img3 from '../../assets/img/ja3.jpg';
+import img3 from '../../assets/img/main-img-compressed.jpg';
 
 export default function Opening() {
 

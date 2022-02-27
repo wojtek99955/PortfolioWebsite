@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { SectionTittle } from '../Atoms/SectionTittle';
 import { device } from '../../assets/device';
-import img from '../../assets/img/about-photo.jpg';
+import img from '../../assets/img/about-photo-compressed.jpg';
 
 export const StyledSection = styled.section`
 background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.white};
