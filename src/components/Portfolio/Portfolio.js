@@ -1,13 +1,12 @@
 import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { StyledButton } from '../Opening/OpeningStyles';
 import projects from '../../projects';
 import "aos/dist/aos.css";
 import { useEffect, useContext } from 'react';
 import Aos from 'aos';
 import { SwitchContext } from '../../App';
-import { Section, StyledContainer, StyledItem, StyledSlider, NextIcon, PrevIcon, DescriptionContainer, CheckmarkIcon } from './PortfolioStyles';
+import { Section, StyledContainer, StyledItem, StyledSlider, NextIcon, PrevIcon, DescriptionContainer, CheckmarkIcon, StyledButton, ButtonsContainer, DemoIcon, GithubIcon } from './PortfolioStyles';
 import { SectionTittle } from "../Atoms/SectionTittle";
 
 
@@ -86,9 +85,14 @@ export default function Portfolio() {
                     )
                   })}
                 </DescriptionContainer>
-                <a href={item.link} target="_blank" rel="noreferrer">
-                  <StyledButton>Demo</StyledButton>
-                </a>
+                <ButtonsContainer>
+                  <a href={item.link} target="_blank" rel="noreferrer">
+                    <DemoIcon />Demo
+                  </a>
+                  <a href={item.link}>
+                    <GithubIcon />GitHub
+                  </a>
+                </ButtonsContainer>
               </div>
             </StyledItem>
           })}

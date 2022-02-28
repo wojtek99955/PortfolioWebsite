@@ -4,6 +4,8 @@ import { MdOutlineNavigateBefore } from 'react-icons/md';
 import { device } from '../../assets/device';
 import Slider from "react-slick";
 import { MdDoneOutline } from 'react-icons/md';
+import { MdWebAsset } from 'react-icons/md';
+import { FaGithub } from 'react-icons/fa';
 
 
 export const Section = styled.section`
@@ -117,15 +119,11 @@ export const PrevIcon = styled(MdOutlineNavigateBefore)`
     font-size: 60px;  
 `
 export const StyledButton = styled.button`
-    padding: 0.6rem 1.2rem;
-    background-color: #705EDC;
-    border: none;
-    border-radius: 8px;
-    color:white;
-    cursor: pointer;
-    margin-top: 1rem;
-    right:0;
 
+
+    &:last-child{
+        background-color:green;
+    }
 `
 
 export const DescriptionContainer = styled.div`
@@ -159,4 +157,41 @@ export const CheckmarkIcon = styled(MdDoneOutline)`
     color: ${({ theme }) => theme.colors.basePurple};
     margin-right:0.5rem;
     font-size: 1rem;
+`
+export const ButtonsContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    a{
+        text-decoration: none;
+            padding: 0.6rem 1.2rem;
+    background-color: #705EDC;
+    border: none;
+    border-radius: 8px;
+    color:white;
+    cursor: pointer;
+    margin-top: 1rem;
+    right:0;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+
+    &:nth-child(2){
+        background-color: transparent;
+        border: ${({ theme }) => `3px solid ${theme.colors.basePurple}`}
+    }
+
+        
+    }
+`
+export const DemoIcon = styled(MdWebAsset)`
+    font-size: 1.2rem;
+    color:white;
+`
+
+export const GithubIcon = styled(FaGithub)`
+    font-size: 1rem;
+    color:white;
 `
