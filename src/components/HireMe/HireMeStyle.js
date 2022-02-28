@@ -8,7 +8,6 @@ export const HireSection = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
-
 `
 
 
@@ -29,6 +28,7 @@ export const HireContainer = styled.div`
         margin-bottom: 2.5rem;
         color: ${({ theme }) => theme.colors.white};
         text-align: center;
+        line-height:1.4rem;
     }
 
     button{

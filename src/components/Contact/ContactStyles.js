@@ -158,13 +158,6 @@ export const ContactItem = styled.div`
     p{
         font-size: ${({ theme }) => theme.fontSize.xs};
         color: ${({ theme }) => theme.colors.grey};
-
-        @media ${device.mobileM}{
-            font-size: ${({ theme }) => theme.fontSize.s};
-        }
-        @media ${device.tablet}{
-            font-size: ${({ theme }) => theme.fontSize.xs};
-        }
     }
     
 `

@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { BsMouse } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
 import { FiLinkedin } from 'react-icons/fi';
