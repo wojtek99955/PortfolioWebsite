@@ -164,26 +164,25 @@ export const ButtonsContainer = styled.div`
 
     a{
         text-decoration: none;
-            padding: 0.6rem 1.2rem;
-    background-color: #705EDC;
-    border: none;
-    border-radius: 8px;
-    color:white;
-    cursor: pointer;
-    margin-top: 1rem;
-    right:0;
-    width:100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap:0.5rem;
+        padding: 0.6rem 1.2rem;
+        background-color: #705EDC;
+        border: none;
+        border-radius: 8px;
+        color:white;
+        cursor: pointer;
+        margin-top: 1rem;
+        right:0;
+        width:100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:0.5rem;
 
-    &:nth-child(2){
-        background-color: transparent;
-        border: ${({ theme }) => `3px solid ${theme.colors.basePurple}`}
-    }
-
-        
+        &:nth-child(2){
+            background-color: transparent;
+            border: ${({ theme }) => `3px solid ${theme.colors.basePurple}`}
+        }
+   
     }
 `
 export const DemoIcon = styled(MdWebAsset)`

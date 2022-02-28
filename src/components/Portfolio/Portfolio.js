@@ -89,7 +89,7 @@ export default function Portfolio() {
                   <a href={item.link} target="_blank" rel="noreferrer">
                     <DemoIcon />Demo
                   </a>
-                  <a href={item.link}>
+                  <a href={item.githubLink} target="_blank" rel="noreferrer">
                     <GithubIcon />GitHub
                   </a>
                 </ButtonsContainer>

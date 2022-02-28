@@ -77,9 +77,14 @@ export const DescriptionContainer = styled.div`
         color: ${({ theme }) => theme.colors.grey};
         text-align: center;
         margin-top: 2rem;
+
         @media ${device.tablet}{
             text-align: start;
         }
+    }
+    a{
+        text-decoration: none;
+        color: ${({ theme }) => theme.colors.white};
     }
     button{
         align-self:center;
@@ -107,10 +112,6 @@ export const DescriptionContainer = styled.div`
                 }
     }
 
-        }
-        a{
-            text-decoration: none;
-            color: ${({ theme }) => theme.colors.white};
         }
     }
 `
