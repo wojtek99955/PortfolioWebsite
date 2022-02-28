@@ -1,9 +1,9 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import "aos/dist/aos.css";
 import Aos from 'aos';
 import {
     StyledH1, StyledH2, StyledPar, Img, StyledWrapper, StyledContainer, Mouse, Scroll, Section,
-    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, GitMergeIcon, CodeIcon, ParallaxContainer, ParallaxChild, DevBoard, WindowDev, DevicesIcon, DeviceHubIcon, Container
+    GitHubIcon, LinkedInIcon, MessengerIcon, Socials, MainSection, StyledSendIcon, SendButton, GitMergeIcon, CodeIcon, ParallaxContainer, ParallaxChild, DevBoard, WindowDev, DevicesIcon, DeviceHubIcon, Container,
 } from './OpeningStyles';
 import { SwitchContext } from '../../App';
 import Typewriter from 'typewriter-effect';
@@ -16,6 +16,7 @@ export default function Opening() {
     }, [])
 
     const context = useContext(SwitchContext);
+    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <Container data-aos="fade-up" data-aos-delay="600">
@@ -56,7 +57,7 @@ export default function Opening() {
                                 <StyledPar toggle={context.toggle}>
                                     A passionate frontend developer <br /> from Poland, producing quality work
                                 </StyledPar>
-                                <SendButton to="contact">
+                                <SendButton to="contact" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} hovered={isHovered}>
                                     Contact Me
                                     <i><StyledSendIcon /></i>
                                 </SendButton>

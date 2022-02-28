@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { BsMouse } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
 import { FiLinkedin } from 'react-icons/fi';
@@ -224,6 +224,8 @@ export const Socials = styled.div`
 
 export const MainSection = styled.div`
     grid-column: 1/4;
+    position:relative;
+    z-index:2;
 
 @media ${device.tablet}{
     grid-column: 2/3;
@@ -249,8 +251,11 @@ position:relative;
 display: inline-block;
 
 `
+
+
+
 export const SendButton = styled(Link)`
-    padding: 1rem 1rem;
+    padding: 0.8rem;
     color: white;
     background-color: ${({ theme }) => theme.colors.basePurple};
     border: none;
@@ -260,9 +265,41 @@ export const SendButton = styled(Link)`
     width:11rem;
     justify-content: center;
     align-items: center;
+    position:relative;
+
+
+    &::before{
+        content:"";
+        position:absolute;
+        display:block;
+        animation-name: ${({ hovered }) => hovered ? "none" : "pulse"};
+        animation-duration: 2s;
+        animation-iteration-count:infinite;
+        animation-timing-function: ease-in;
+        z-index:-1;
+        border-radius:15px;
+        background-color: ${({ theme }) => theme.colors.basePurple};
+
+        @keyframes pulse{
+                50%{
+        width: 100%;
+        height: 100%;
+    }
+    70%{
+        opacity: 1;
+    }
+    100%{
+        width:120%;
+        height:150%;
+        opacity:0;
+    }
+        }
+
+    }
 
     &:hover{
         box-shadow: 0px 0px 16px 0px rgba(66, 68, 90, 1);
+
     }
 
     &:active{
