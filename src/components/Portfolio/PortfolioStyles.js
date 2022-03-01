@@ -178,9 +178,16 @@ export const ButtonsContainer = styled.div`
         align-items: center;
         gap:0.5rem;
 
+        &:hover{
+            background-color:#584AC1;
+        }
+
         &:nth-child(2){
-            background-color: transparent;
-            border: ${({ theme }) => `3px solid ${theme.colors.basePurple}`}
+            background-color:transparent;
+            border: ${({ theme }) => `3px solid ${theme.colors.basePurple}`};
+            &:hover{
+                background-color: rgba(129, 118, 196, 0.7);
+            }
         }
    
     }
