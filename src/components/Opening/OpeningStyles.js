@@ -84,8 +84,8 @@ export const Img = styled.div`
         }
 
         @media ${device.tablet}{
-            width: 16rem;
-            height: 16rem;
+            width: 18rem;
+            height: 18rem;
         }
         @media ${device.laptop}{
             height: 21rem;
@@ -104,8 +104,8 @@ export const Img = styled.div`
 
     @media ${device.tablet}{
         grid-column: 3/4;
-        height: 18rem;
-        width:18rem;
+        height: 20rem;
+        width:20rem;
     }
     @media ${device.laptop}{
         height: 23rem;
