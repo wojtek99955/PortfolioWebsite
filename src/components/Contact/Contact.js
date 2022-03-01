@@ -9,7 +9,6 @@ import {
     LocationIcon, ContactWrapper, SubmitMessage
 } from './ContactStyles';
 import { SwitchContext } from '../../App';
-import { Element } from 'react-scroll';
 import emailjs from 'emailjs-com';
 import { SectionTittle } from '../Atoms/SectionTittle';
 
@@ -42,7 +41,6 @@ function Contact() {
 
     return (
         <ContactSection id="contact" toggle={context.toggle}>
-            <Element name="contact" />
             <ContactWrapper >
                 <SectionTittle toggle={context.toggle}>
                     <div data-aos="fade-down">
@@ -59,7 +57,6 @@ function Contact() {
                                 <p>+48 535-618-931</p>
                             </div>
                         </ContactItem>
-
                         <ContactItem toggle={context.toggle}>
                             <MailIcon />
                             <div>
@@ -75,9 +72,7 @@ function Contact() {
                                 <p>Poznań, Poland</p>
                             </div>
                         </ContactItem>
-
                     </ContactInfo>
-
                     <form ref={formRef} onSubmit={sendEmail} data-aos="fade-up">
                         <FormRow>
                             <input type="text" name="name" placeholder="Name" required></input>
