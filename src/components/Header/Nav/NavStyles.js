@@ -11,7 +11,7 @@ align-items: center;
 padding: 0.2rem 0;
 
 @media ${device.tablet}{
-    padding:1.2rem;
+    padding:1.2rem 0;
 }
 `
 

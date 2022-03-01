@@ -89,6 +89,10 @@ export const DescriptionContainer = styled.div`
     button{
         align-self:center;
         background-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
+        &:hover{
+            box-shadow: 0px 0px 16px 0px rgba(66, 68, 90, 1);
+            background-color:#584AC1;
+        }
         @media ${device.tablet}{
             align-self: start;
         }

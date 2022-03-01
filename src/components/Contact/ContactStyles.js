@@ -82,6 +82,7 @@ flex-direction: column;
 
             &:hover{
                 box-shadow: 0px 0px 16px 0px rgba(66, 68, 90, 1);
+                background-color:#584AC1;
             }
 
             &:active{

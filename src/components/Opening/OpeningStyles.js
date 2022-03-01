@@ -57,7 +57,7 @@ export const StyledPar = styled.p`
 `
 
 export const Img = styled.div`
-
+    position:absolute;
     display: flex;
     align-items: center;
     width:13rem;
@@ -78,30 +78,38 @@ export const Img = styled.div`
         color:green;
         display: block;
 
+        @media ${device.mobileL}{
+            width:14rem;
+            height:14rem;
+        }
+
         @media ${device.tablet}{
-            width: 17rem;
-            height: 17rem;
+            width: 16rem;
+            height: 16rem;
         }
         @media ${device.laptop}{
-            height: 23rem;
-            width: 23rem;
+            height: 21rem;
+            width: 21rem;
         }
         @media ${device.laptopL}{
             width:26rem;
             height:26rem;
         }
     }
+    
+    @media ${device.mobileL}{
+        width:16rem;
+        height:16rem;
+    }
 
     @media ${device.tablet}{
         grid-column: 3/4;
-        height: 17rem;
-        width:19rem;
-        height:19rem;
-
+        height: 18rem;
+        width:18rem;
     }
     @media ${device.laptop}{
-        height: 25rem;
-        width: 25rem;
+        height: 23rem;
+        width: 23rem;
     }
     @media ${device.laptopL}{
         width:30rem;
@@ -240,10 +248,14 @@ export const StyledWrapper = styled.div`
     grid-template-columns: 1fr 1fr;
 
     @media ${device.tablet}{
-        grid-template-columns: 50px 1fr 1fr;
-        width:90%;
+        grid-template-columns:3rem 1fr 1fr;
+        width:100%;
         
     }
+    @media ${device.laptop}{
+        grid-template-columns: 5rem 1fr 1fr;
+        width:90%;
+    }    
 `
 
 export const ButtonContainer = styled.div`
@@ -255,17 +267,18 @@ display: inline-block;
 
 
 export const SendButton = styled(Link)`
-    padding: 0.8rem;
+    padding: 0.6rem;
     color: white;
     background-color: ${({ theme }) => theme.colors.basePurple};
     border: none;
     border-radius: 15px;
     cursor:pointer;
     display: flex;
-    width:11rem;
     justify-content: center;
     align-items: center;
     position:relative;
+    width:10rem;
+    font-size: ${({ theme }) => theme.fontSize.s};
 
 
     &::before{
@@ -299,6 +312,7 @@ export const SendButton = styled(Link)`
 
     &:hover{
         box-shadow: 0px 0px 16px 0px rgba(66, 68, 90, 1);
+        background-color:#584AC1;
 
     }
 
