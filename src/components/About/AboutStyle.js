@@ -101,12 +101,12 @@ export const DescriptionContainer = styled.div`
             padding-left: 0.5rem;
             font-size: 1.2rem;
             color: white;
-            animation: ${({ hovered }) => hovered ? "900ms ease-in-out 0s infinite normal none running download" : "none"} ;
+            animation: ${({ hovered }) => hovered ? "none" : "1.5s ease-in-out 0s infinite normal none running download"} ;
             position:relative;
 
             @keyframes download{
 
-                0%{
+                50%{
                     top: 0;
                     opacity: 1;
                 }
