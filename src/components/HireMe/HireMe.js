@@ -20,7 +20,7 @@ function HireMe() {
 
                 <ContentContainer data-aos="fade-up">
                     <h2>Hire Me!</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing<br /> elit. Perspiciatis, natus ea est rerum praesentium totam.</p>
+                    <p>Interested in working together?<br />Fill out the form below and I will get back to you as soon as I can.</p>
                     <button><StyledLink to="contact">Contact Me<i><BiSend /></i></StyledLink></button>
                 </ContentContainer>
             </HireContainer>
