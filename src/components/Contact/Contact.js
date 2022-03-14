@@ -61,7 +61,7 @@ function Contact() {
                             <MailIcon />
                             <div>
                                 <h3>E-mail</h3>
-                                <p>wojtek99955@gmail.com</p>
+                                <p>wojtekk.dev@gmail.com</p>
                             </div>
                         </ContactItem>
 
