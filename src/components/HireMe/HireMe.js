@@ -21,7 +21,7 @@ function HireMe() {
             <Overlay />
             <HireContainer toggle={context.toggle}>
 
-                <ContentContainer>
+                <ContentContainer data-aos="fade-up">
                     <h2>Hire Me!</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing<br /> elit. Perspiciatis, natus ea est rerum praesentium totam.</p>
                     <button><StyledLink to="contact">Contact Me<i><BiSend /></i></StyledLink></button>
