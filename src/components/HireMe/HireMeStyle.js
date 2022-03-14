@@ -33,11 +33,11 @@ export const HireContainer = styled.div`
 
     button{
         padding: .8rem 1.6rem;
-        color: ${({ toggle, theme }) => toggle ? theme.colors.white : theme.colors.basePurple};
+        color: ${({ theme }) => theme.colors.basePurple};
         border: none;
         border-radius: 10px;
         font-size: ${({ theme }) => theme.fontSize.md};
-        background-color:${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.white};
+        background-color:white;
         cursor:pointer;
 
         &:hover{

@@ -1,9 +1,8 @@
 import React from 'react';
 import { BiSend } from 'react-icons/bi';
 import "aos/dist/aos.css";
-import { useEffect, useContext } from 'react';
+import { useEffect } from 'react';
 import Aos from 'aos';
-import { SwitchContext } from '../../App';
 import { HireContainer, HireSection, Overlay, ContentContainer, StyledLink } from './HireMeStyle';
 
 
@@ -14,12 +13,10 @@ function HireMe() {
         Aos.init({ duration: 1000 })
     }, [])
 
-    const context = useContext(SwitchContext);
-
     return (
-        <HireSection toggle={context.toggle}>
+        <HireSection >
             <Overlay />
-            <HireContainer toggle={context.toggle}>
+            <HireContainer >
 
                 <ContentContainer data-aos="fade-up">
                     <h2>Hire Me!</h2>
