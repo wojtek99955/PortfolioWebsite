@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { SwitchContext } from '../../App';
 import { BarWrapper, Bar } from './ProgressBarStyle';
 
-function ProgressBar() {
+function ProgressBar({ navRef }) {
 
     const [scrollTop, setScrollTop] = useState(0);
     const [showBar, setShowBar] = useState(false);
@@ -15,21 +15,21 @@ function ProgressBar() {
         setScrollTop(scrolled);
     }
 
-    const showProgress = () => {
-        if (window.pageYOffset > 400) {
-            setShowBar(true);
-        } else {
-            setShowBar(false);
-        }
-    };
+
 
     useEffect(() => {
         window.addEventListener("scroll", onScroll);
-        window.addEventListener("scroll", showProgress)
+        window.addEventListener("scroll", () => {
+            if (window.pageYOffset > navRef.current.clientHeight) {
+                setShowBar(true)
+            } else {
+                setShowBar(false);
+            }
+        })
 
 
         return () => window.addEventListener("scroll", onScroll);
-    }, [])
+    }, [navRef])
 
     const context = useContext(SwitchContext);
 
