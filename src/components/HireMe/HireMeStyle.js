@@ -28,7 +28,8 @@ export const HireContainer = styled.div`
         margin-bottom: 2.5rem;
         color: ${({ theme }) => theme.colors.white};
         text-align: center;
-        line-height:1.4rem;
+        line-height:1.7rem;
+        font-size: ${({ theme }) => theme.fontSize.s};
     }
 
     button{
@@ -36,7 +37,7 @@ export const HireContainer = styled.div`
         color: ${({ theme }) => theme.colors.basePurple};
         border: none;
         border-radius: 10px;
-        font-size: ${({ theme }) => theme.fontSize.md};
+        font-size: ${({ theme }) => theme.fontSize.xs};
         background-color:white;
         cursor:pointer;
 
@@ -48,7 +49,7 @@ export const HireContainer = styled.div`
         }
         i{
             padding-left: 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
     }
 `

@@ -128,7 +128,7 @@ export const Img = styled.div`
 
 
 export const StyledButton = styled.button`
-    padding: 0.6rem 1.2rem;
+    padding: 0.6rem 1.8rem;
     background-color: #705EDC;
     border: none;
     border-radius: 8px;
@@ -139,6 +139,7 @@ export const StyledButton = styled.button`
     display: flex;
     justify-content: center;
     align-items:center;
+    
 
 `
 
@@ -206,18 +207,18 @@ export const Section = styled.section`
 `
 
 export const LinkedInIcon = styled(FiLinkedin)`
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.basePurple};
     cursor: pointer;
 `
 
 export const GitHubIcon = styled(FiGithub)`
-    font-size:1rem;
+    font-size:1.2rem;
     color: ${({ theme }) => theme.colors.basePurple};
     cursor: pointer;
 `
 export const MessengerIcon = styled(RiMessengerLine)`
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.basePurple};
     cursor: pointer;
 `

@@ -7,6 +7,10 @@ export const Ul = styled.ul`
   list-style: none;
   display: flex;
   gap: 2rem;
+  li{
+    font-size: ${({ theme }) => theme.fontSize.xs};
+        
+  }
 
   @media (max-width: 768px) {
       flex-direction: column;

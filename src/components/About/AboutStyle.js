@@ -72,8 +72,8 @@ export const DescriptionContainer = styled.div`
     }
 
     p{
-        line-height: 1.5rem;
-        font-size: ${({ theme }) => theme.fontSize.s};
+        line-height: 1.7rem;
+        font-size: ${({ theme }) => theme.fontSize.xs};
         color: ${({ theme }) => theme.colors.grey};
         text-align: center;
         margin-top: 2rem;
@@ -89,6 +89,8 @@ export const DescriptionContainer = styled.div`
     button{
         align-self:center;
         background-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
+        font-size: ${({ theme }) => theme.fontSize.xs};
+        padding: 0.8rem 1.5rem;
         &:hover{
             box-shadow: 0px 0px 16px 0px rgba(66, 68, 90, 1);
             background-color:#584AC1;
@@ -99,7 +101,7 @@ export const DescriptionContainer = styled.div`
         i{
             vertical-align: middle;
             padding-left: 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             color: white;
             animation: ${({ hovered }) => hovered ? "none" : "1.5s ease-in-out 0s infinite normal none running download"} ;
             position:relative;
@@ -148,8 +150,12 @@ export const StyledH3 = styled.h3`
         text-decoration-color: ${({ theme, toggle }) => toggle ? theme.colors.basePurple : theme.colors.basePurple};
         cursor: pointer;
         color: ${({ context }) => context ? "white" : "black"};
+        font-size: ${({ theme }) => theme.fontSize.m};
+        font-weight:800;
+
+        
 `
 
 export const Text = styled.div`
-    min-height:8rem;
+    min-height:10rem;
 `

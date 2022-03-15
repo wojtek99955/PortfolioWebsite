@@ -14,7 +14,7 @@ const NavMobile = ({ open, close }) => {
       <li><StyledLink activeClass="active" spy={true} onClick={close} to="about" smooth={true} duration={300} toggle={context.toggle} >About</StyledLink></li>
       <li><StyledLink activeClass="active" spy={true} onClick={close} to="skills" smooth={true} duration={800} toggle={context.toggle}>Skills</StyledLink></li>
       <li><StyledLink activeClass="active" spy={true} onClick={close} to="projects" smooth={true} duration={800} toggle={context.toggle}>Portfolio</StyledLink></li>
-      <li><StyledLink activeClass="active" spy={true} onClick={close} to="contact" smooth={true} duration={800} toggle={context.toggle}>Contact</StyledLink></li>
+      <li><StyledLink activeClass="active" spy={true} onClick={close} offset={-90} to="contact" smooth={true} duration={800} toggle={context.toggle}>Contact</StyledLink></li>
       <SwitchMode />
     </Ul>
   )

@@ -23,7 +23,7 @@ margin-left:1rem;
 cursor:pointer;
 
     img{
-        width:3rem;
+        width:3.5rem;
     }
 
  `

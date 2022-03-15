@@ -79,6 +79,7 @@ flex-direction: column;
     button{
         align-self:flex-start;
         padding: 0.8rem 1.3rem;
+        font-size: ${({ theme }) => theme.fontSize.xs};
 
             &:hover{
                 box-shadow: 0px 0px 16px 0px rgba(66, 68, 90, 1);
@@ -92,13 +93,14 @@ flex-direction: column;
         i{
             vertical-align: middle;
             padding-left: 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
     }
 
     input, textarea{
         caret-color: ${({ toggle }) => toggle ? "white" : "black"};
         color: ${({ toggle, theme }) => toggle ? theme.colors.white : theme.colors.black};
+        font-size: ${({ theme }) => theme.fontSize.xs};
     }
 
 `
