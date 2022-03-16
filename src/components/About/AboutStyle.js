@@ -38,8 +38,8 @@ margin: auto;
     align-self:center;
 }
 @media ${device.laptop}{
-    width:16rem;
-    height:16rem;
+    width:17rem;
+    height:17rem;
     justify-self: flex-start;
 }
 &::after{
@@ -54,8 +54,8 @@ margin: auto;
     left:40px;
     top:30px;
     @media ${device.laptop}{
-        width:16rem;
-        height:16rem;
+        width:17rem;
+        height:17rem;
     }
 }
 `
@@ -124,7 +124,7 @@ export const DescriptionContainer = styled.div`
 
 export const StyledSectionTittle = styled(SectionTittle)`
     h2{
-        color: ${({ theme, toggle }) => toggle ? "white" : "black"};
+        color: ${({ toggle }) => toggle ? "white" : "black"};
     }
     h3{
         color: ${({ theme }) => theme.colors.grey};
