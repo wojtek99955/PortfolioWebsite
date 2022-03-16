@@ -5,7 +5,7 @@ import img from '../../assets/img/about-photo-compressed.jpg';
 
 export const StyledSection = styled.section`
 background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.white};
-padding-bottom:4rem ;
+padding:4rem 0 ;
 scroll-behavior: smooth;
 `
 
