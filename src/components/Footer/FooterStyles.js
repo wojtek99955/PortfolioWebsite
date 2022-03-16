@@ -73,25 +73,25 @@ export const SocialsContainer = styled.div`
 export const GithubIcon = styled(FaGithub)`
     color: white;    
     cursor: pointer;
-    font-size:1rem;
+    font-size:1.2rem;
 `
 
 export const FacebookIcon = styled(GrFacebookOption)`
     color:white;
     cursor: pointer;
-    font-size:1rem;
+    font-size:1.2rem;
 `
 
 export const MessengerIcon = styled(FaFacebookMessenger)`
     color: white;
     cursor: pointer;
-    font-size:1rem;
+    font-size:1.2rem;
 `
 
 export const LinkedInIcon = styled(FiLinkedin)`
     color: white;
     cursor: pointer;
-    font-size:1rem;
+    font-size:1.2rem;
 `
 export const StyledLink = styled(Link)`
     cursor: pointer;
