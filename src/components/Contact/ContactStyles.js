@@ -5,8 +5,12 @@ import { FiMail } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 
 export const ContactSection = styled.section`
-    padding: 5rem 0;
+    padding-bottom: 4rem;
     background-color: ${({ theme, toggle }) => toggle ? theme.colors.darkMode : theme.colors.white};
+    @media ${device.laptop}{
+        padding-top: 6rem;
+        padding-bottom: 10rem;
+    }
 `
 
 export const ContactWrapper = styled.div`

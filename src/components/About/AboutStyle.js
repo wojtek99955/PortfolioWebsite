@@ -5,8 +5,12 @@ import img from '../../assets/img/about-photo-compressed.jpg';
 
 export const StyledSection = styled.section`
 background-color: ${({ toggle, theme }) => toggle ? theme.colors.darkMode : theme.colors.white};
-padding:4rem 0 ;
+padding:0rem 0 ;
 scroll-behavior: smooth;
+
+@media ${device.laptop}{
+    padding:4rem 0;
+}
 `
 
 export const Container = styled.div`
