@@ -16,22 +16,21 @@ const Container = styled.div`
     z-index: 10;
     background: white;
     align-items: center;
-    gap: 0.5rem;
     border-radius: 5px;
-    box-shadow: 0px 11px 53px 0px rgba(48, 49, 57, 0.31);
-    animation: MoveIn 400ms ease-in 0s;
+    box-shadow: 0px 11px 53px 0px rgba(48, 49, 57, 0.61);
+    animation: MoveIn 400ms cubic-bezier(.45,2.09,1,1) 0s;
     animation-fill-mode:both;
 
 
     @keyframes MoveIn{
         0%{
             opacity: 0;
-            left: 0;
+            left: -6rem;
 
         }
         100%{
             opacity: 1;
-            left: 1rem;
+            left: 1.5rem;
         }
     }
 
@@ -52,7 +51,7 @@ const Container = styled.div`
 
 const MessengerIcon = styled(FacebookMessenger)`
     color: white;
-    width: 1.2rem;
+    width: 1rem;
     margin-left:0.5rem;
 `
 
@@ -65,6 +64,24 @@ const CloseIcon = styled(CloseOutline)`
 const HandIcon = styled(Hand)`
     width:4rem;
     color: orange;
+    animation: handShake 300ms linear 600ms;
+    animation-direction: alternate ;
+    animation-iteration-count: 8;
+
+    @keyframes handShake{
+        0%{
+            transform: rotate(30deg);
+        }
+        100%{
+            transform: rotate(-30deg);
+        }
+    }
+`
+const Content = styled.div`
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
 `
 
 function TextMe() {
@@ -84,9 +101,11 @@ function TextMe() {
             {showMess ? (
                 <Container>
                     <CloseIcon onClick={handleClose}/>
+                    <Content>
                     <h2>Hi!</h2>
                     <HandIcon/>
                     <a href="https://m.me/wojtek.ksiazek.14" target="_blank" rel="noreferrer"> Text Me! <MessengerIcon /></a>
+                    </Content>
                 </Container>)
                 : null }
         </>
