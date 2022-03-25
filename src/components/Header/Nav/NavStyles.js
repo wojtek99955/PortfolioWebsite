@@ -8,7 +8,7 @@ align-items: center;
 max-width: 1300px;
 margin:auto;
 align-items: center;
-padding: 0.2rem 0;
+padding: 0.4rem 0;
 
 @media ${device.tablet}{
     padding:1.2rem 0;

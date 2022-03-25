@@ -12,6 +12,7 @@ import HireMe from "./components/HireMe/HireMe";
 import { useState } from "react";
 import Skills from "./components/Skills/Skills";
 import ScrollTopBtn from "./components/ScrollTopBtn/ScrollTopBtn";
+import TextMe from './components/TextMe/TextMe';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <SwitchContext.Provider value={{ toggle, handleToggle }}>
           <GlobalStyle />
           <ScrollTopBtn />
+          <TextMe />
           <Nav />
           <Opening />
           <About />
