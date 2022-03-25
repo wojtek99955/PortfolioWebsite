@@ -8,7 +8,7 @@ import {Hand} from '@styled-icons/entypo/Hand';
 const Container = styled.div`
     position: fixed;
     top:70%;
-    left:1rem;
+
     display: flex;
     flex-direction: column;
     width:300px;
@@ -19,6 +19,21 @@ const Container = styled.div`
     gap: 0.5rem;
     border-radius: 5px;
     box-shadow: 0px 11px 53px 0px rgba(48, 49, 57, 0.31);
+    animation: MoveIn 400ms ease-in 0s;
+    animation-fill-mode:both;
+
+
+    @keyframes MoveIn{
+        0%{
+            opacity: 0;
+            left: 0;
+
+        }
+        100%{
+            opacity: 1;
+            left: 1rem;
+        }
+    }
 
 
     h2{
@@ -54,7 +69,7 @@ const HandIcon = styled(Hand)`
 
 function TextMe() {
 
-    const [showMess, setShowMess] = useState(true);
+    const [showMess, setShowMess] = useState(false);
     const handleClose = () => setShowMess(false);
 
     useEffect(() => {
