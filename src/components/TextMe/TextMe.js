@@ -15,8 +15,8 @@ const Container = styled.div`
     align-items: center;
     border-radius: 5px;
     box-shadow: 0px 11px 53px 0px rgba(48, 49, 57, 0.61);
-    animation: MoveIn 400ms cubic-bezier(.45,2.09,1,1) 0s;
-    animation-fill-mode:both;
+    animation: ${({isMounted}) => isMounted? "MoveIn 400ms cubic-bezier(.45,2.09,1,1) 0s" : "MoveOut 400ms cubic-bezier(.45,2.09,1,1) 0s" };
+    animation-fill-mode: both;
 
 
     @keyframes MoveIn{
@@ -28,6 +28,17 @@ const Container = styled.div`
         100%{
             opacity: 1;
             left: 1.5rem;
+        }
+    }
+
+    @keyframes MoveOut{
+        0%{
+            opacity: 1;
+            left: 1.5rem;
+        }
+        100%{
+            opacity:0;
+            left: -6rem;
         }
     }
 
@@ -85,11 +96,16 @@ const Content = styled.div`
 function TextMe() {
 
     const [showMess, setShowMess] = useState(false);
-    const handleClose = () => setShowMess(false);
+    const [isMounted, setIsMounted] = useState(false);
+    const handleClose = () => {
+        setIsMounted(false);
+        if (!showMess) setShowMess(false);
+    };
 
     useEffect(() => {
         const timer = setTimeout(() => {
             setShowMess(true);
+            setIsMounted(true);
         }, 3000);
         return () => clearTimeout(timer);
     },[]);
@@ -97,7 +113,7 @@ function TextMe() {
     return (
         <>
             {showMess ? (
-                <Container>
+                <Container isMounted={isMounted}>
                     <CloseIcon onClick={handleClose}/>
                     <Content>
                     <h2>Hi!</h2>
