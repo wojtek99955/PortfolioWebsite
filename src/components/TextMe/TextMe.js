@@ -7,12 +7,9 @@ import {Hand} from '@styled-icons/entypo/Hand';
 
 const Container = styled.div`
     position: fixed;
-    top:70%;
-
+    bottom: 5%;
     display: flex;
     flex-direction: column;
-    width:300px;
-    height:220px;
     z-index: 10;
     background: white;
     align-items: center;
@@ -70,10 +67,10 @@ const HandIcon = styled(Hand)`
 
     @keyframes handShake{
         0%{
-            transform: rotate(30deg);
+            transform: rotate(20deg);
         }
         100%{
-            transform: rotate(-30deg);
+            transform: rotate(-20deg);
         }
     }
 `
@@ -82,6 +79,7 @@ const Content = styled.div`
     flex-direction: column;
     align-items: center;
     gap:1rem;
+    padding: 2rem 3rem;
 `
 
 function TextMe() {

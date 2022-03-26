@@ -12,7 +12,7 @@ export const ScrollUpContainer = styled.div`
     height:2.8rem;
     border-radius: 50%;
     background-color: #4836B4;
-    top:90%;
+    bottom: 5%;
     right:1rem;
     position:fixed;
     cursor: pointer;
