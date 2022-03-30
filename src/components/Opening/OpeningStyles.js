@@ -256,7 +256,7 @@ export const StyledWrapper = styled.div`
     }
     @media ${device.laptop}{
         grid-template-columns: 5rem 1fr 1fr;
-        width:90%;
+        width:80%;
     }    
 `
 
@@ -296,18 +296,18 @@ export const SendButton = styled(Link)`
         background-color: ${({ theme }) => theme.colors.basePurple};
 
         @keyframes pulse{
-                50%{
-        width: 100%;
-        height: 100%;
-    }
-    70%{
-        opacity: 1;
-    }
-    100%{
-        width:120%;
-        height:150%;
-        opacity:0;
-    }
+            50%{
+                width: 100%;
+                height: 100%;
+            }
+            70%{
+                opacity: 1;
+            }
+            100%{
+                width:120%;
+                height:150%;
+                opacity:0;
+            }
         }
 
     }
