@@ -43,6 +43,10 @@ export const PagesContainer = styled.div`
     margin: 2rem 0;
     align-items: center; 
 
+    @media ${device.tablet}{
+        margin: 0;
+    }
+
     a{
         text-decoration  : none;
         color:white;
