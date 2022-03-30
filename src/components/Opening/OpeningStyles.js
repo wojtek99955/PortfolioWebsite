@@ -78,9 +78,9 @@ export const Img = styled.div`
         color:green;
         display: block;
 
-        @media ${device.mobileL}{
-            width:14rem;
-            height:14rem;
+        @media ${device.mobileM}{
+            width:16rem;
+            height:16rem;
         }
 
         @media ${device.tablet}{
@@ -97,9 +97,9 @@ export const Img = styled.div`
         }
     }
     
-    @media ${device.mobileL}{
-        width:16rem;
-        height:16rem;
+    @media ${device.mobileM}{
+        width:17rem;
+        height:17rem;
     }
 
     @media ${device.tablet}{
