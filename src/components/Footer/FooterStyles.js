@@ -40,7 +40,7 @@ export const LogoContainer = styled.div`
 export const PagesContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 2rem;
+    margin: 2rem 0;
     align-items: center; 
 
     a{
@@ -53,6 +53,10 @@ export const PagesContainer = styled.div`
             color: ${({ toggle, theme }) => toggle ? theme.colors.basePurple : "#0E0E1C"};
         }
 
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+
     }
 
         @media ${device.tablet}{
@@ -62,7 +66,6 @@ export const PagesContainer = styled.div`
 
 export const SocialsContainer = styled.div`
     display: flex;
-    margin-top: 2rem;
     gap: 1rem;
 
         @media ${device.laptop}{

@@ -29,7 +29,6 @@ function Footer() {
                     <a href="https://github.com/wojtek99955" target="_blank" rel="noreferrer"><GithubIcon /></a>
                     <a href="https://m.me/wojtek.ksiazek.14" target="_blank" rel="noreferrer"><MessengerIcon /></a>
                     <a href="https://www.linkedin.com/in/wojtek-ksi%C4%85%C5%BCek-8732b41a9" target="_blank" rel="noreferrer"><LinkedInIcon /></a>
-
                 </SocialsContainer>
             </FooterContainer>
         </StyledFooter>
