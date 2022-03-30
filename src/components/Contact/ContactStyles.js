@@ -41,6 +41,10 @@ flex-direction: column;
         flex-direction: column;
         width:90%;
 
+        @media ${device.mobileL}{
+            width: 80%;
+        }
+
         @media ${device.tablet}{
             width:60%;
         }
@@ -48,8 +52,6 @@ flex-direction: column;
 
     input{
         background-color: ${({ theme, toggle }) => toggle ? "#211D33" : "#EFEFFD"};
-
-        
         box-sizing: content-box; 
         flex-grow: 1;
         margin-bottom: 1rem;
@@ -113,13 +115,12 @@ export const FormRow = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex-shrink: 1;
     
 
-    @media ${device.mobileL}{
+    @media ${device.tablet}{
         flex-direction: row;
-        gap: 1rem;
-        flex-grow: 0;
+        gap: 0.5rem;
+
     }
 `
 
