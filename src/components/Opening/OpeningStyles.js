@@ -79,8 +79,8 @@ export const Img = styled.div`
         display: block;
 
         @media ${device.mobileM}{
-            width:16rem;
-            height:16rem;
+            width:15rem;
+            height:15rem;
         }
 
         @media ${device.tablet}{
@@ -97,7 +97,7 @@ export const Img = styled.div`
         }
     }
     
-    @media ${device.mobileM}{
+    @media ${device.mobile}{
         width:17rem;
         height:17rem;
     }
@@ -198,6 +198,7 @@ export const Scroll = styled.div`
     p{
         font-size:${({ theme }) => theme.fontSize.xs};
         color: ${({ theme }) => theme.colors.basePurple};
+        white-space: nowrap;
     }
 `
 
