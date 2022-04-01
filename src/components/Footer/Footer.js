@@ -23,7 +23,7 @@ function Footer() {
                     <StyledLink to="about" offset={-70}>About</StyledLink>
                     <StyledLink to="skills">Skills</StyledLink>
                     <StyledLink to="projects">Portfolio</StyledLink>
-                    <StyledLink to="contact">Contact Me</StyledLink>
+                    <StyledLink to="contact">Contact</StyledLink>
                 </PagesContainer>
                 <SocialsContainer>
                     <a href="https://github.com/wojtek99955" target="_blank" rel="noreferrer"><GithubIcon /></a>
