@@ -51,7 +51,7 @@ function Contact() {
                 <ContactContainer toggle={context.toggle}>
                     <ContactInfo data-aos="fade-up-right">
                         <ContactItem toggle={context.toggle}>
-                            <PhoneIcon />
+                            <a href="tel:+48535618931"><PhoneIcon /></a>
                             <div>
                                 <h3>Call Me</h3>
                                 <p>+48 535-618-931</p>
