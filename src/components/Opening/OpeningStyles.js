@@ -60,17 +60,19 @@ export const Img = styled.div`
     position:absolute;
     display: flex;
     align-items: center;
-    width:13rem;
-    height: 13rem;
+    width:14rem;
+    height: 14rem;
     justify-self: center;
     position:relative;
     position: relative;
     z-index:1;
+    margin:auto;
+    margin-bottom: 2rem;
 
     &::before{
         content:"";
-        width:12rem;
-        height:12rem;
+        width:13rem;
+        height:13rem;
         background-image: url(${bgr});
         background-repeat: no-repeat;
         position:absolute;
@@ -79,8 +81,8 @@ export const Img = styled.div`
         display: block;
 
         @media ${device.mobileM}{
-            width:15rem;
-            height:15rem;
+            width:16rem;
+            height:16rem;
         }
 
         @media ${device.tablet}{
@@ -97,15 +99,16 @@ export const Img = styled.div`
         }
     }
     
-    @media ${device.mobile}{
-        width:17rem;
-        height:17rem;
+    @media ${device.mobileM}{
+        width:18rem;
+        height:18rem;
     }
 
     @media ${device.tablet}{
         grid-column: 3/4;
         height: 20rem;
         width:20rem;
+        margin-bottom: 0;
     }
     @media ${device.laptop}{
         height: 23rem;
@@ -225,10 +228,15 @@ export const MessengerIcon = styled(RiMessengerLine)`
 `
 
 export const Socials = styled.div`
-    display: flex;
-    flex-direction: column;
     align-self: center;
     gap:.8rem;
+    display: none;
+
+    @media ${device.tablet}{
+        display: block;
+        display: flex;
+        flex-direction: column;
+    }
 `
 
 
@@ -246,10 +254,11 @@ export const MainSection = styled.div`
 `
 
 export const StyledWrapper = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
 
     @media ${device.tablet}{
+        display: grid;
         grid-template-columns:3rem 1fr 1fr;
         width:100%;
         
