@@ -20,6 +20,11 @@ Link: https://wojtekk-dev.netlify.app/
 * react-carousel
 * react-parallax-mouse
 
+
+## Screenshots
+
+![portfolioapp](https://i.ibb.co/P1K9Ljd/portfolio-screen.png)
+
 ## Installation
 
 
