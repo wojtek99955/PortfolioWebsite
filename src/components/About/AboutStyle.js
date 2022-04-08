@@ -57,7 +57,7 @@ export const Image = styled.div`
     position: absolute;
     z-index: -2;
     left: 1rem;
-    top: 0.8rem;
+    top: 1.2rem;
     @media ${device.laptop} {
       width: 17rem;
       height: 17rem;
