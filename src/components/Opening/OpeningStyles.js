@@ -169,7 +169,7 @@ export const Mouse = styled(BsMouse)`
 
 export const Scroll = styled.div`
   position: relative;
-  top: 3rem;
+  top: 1.5rem;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -194,9 +194,13 @@ export const Scroll = styled.div`
   }
 
   p {
-    font-size: ${({ theme }) => theme.fontSize.xs};
+    font-size: ${({ theme }) => theme.fontSize.xxs};
     color: ${({ theme }) => theme.colors.basePurple};
     white-space: nowrap;
+
+    @media ${device.tablet} {
+      font-size: ${({ theme }) => theme.fontSize.xs};
+    }
   }
 `;
 
