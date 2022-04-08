@@ -329,7 +329,7 @@ export const GitMergeIcon = styled(GitMerge)`
   width: 3rem;
   color: #dfdeee;
   position: absolute;
-  left: 10%;
+  left: 5%;
   top: 20vh;
   transform: rotate(50deg);
 `;
@@ -350,10 +350,10 @@ export const CodeIcon = styled(HiOutlineCode)`
 
 export const DevBoard = styled(DeveloperBoard)`
   width: 2.5rem;
-  color: #dfdeee;
+  color: #c7c0f1;
   position: absolute;
   top: 15vh;
-  left: 70%;
+  left: 80%;
   transform: rotate(30deg);
 
   @media ${device.tablet} {
