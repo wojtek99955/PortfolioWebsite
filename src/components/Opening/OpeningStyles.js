@@ -67,12 +67,11 @@ export const Img = styled.div`
   position: relative;
   z-index: 1;
   margin: auto;
-  margin-bottom: 2rem;
 
   &::before {
     content: "";
-    width: 13rem;
-    height: 13rem;
+    width: 12rem;
+    height: 12rem;
     background-image: url(${bgr});
     background-repeat: no-repeat;
     position: absolute;
