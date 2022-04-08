@@ -6,8 +6,6 @@ import { Hand } from "@styled-icons/entypo/Hand";
 export const Container = styled.div`
   position: fixed;
   bottom: 5%;
-  display: flex;
-  flex-direction: column;
   z-index: 10;
   background: white;
   align-items: center;
@@ -43,6 +41,8 @@ export const Container = styled.div`
 
   h2 {
     text-align: center;
+    font-size: ${({ theme }) => theme.fontSize.l};
+    font-weight: 400;
   }
 
   a {
@@ -68,8 +68,9 @@ export const MessengerIcon = styled(FacebookMessenger)`
 export const CloseIcon = styled(CloseOutline)`
   cursor: pointer;
   width: 1.5rem;
-  align-self: flex-end;
   color: ${({ theme }) => theme.colors.grey};
+  position: absolute;
+  right: 1px;
 `;
 export const HandIcon = styled(Hand)`
   width: 4rem;
@@ -91,6 +92,6 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem 3rem;
 `;
