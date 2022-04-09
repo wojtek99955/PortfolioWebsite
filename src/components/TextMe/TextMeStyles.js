@@ -1,7 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { FacebookMessenger } from "@styled-icons/fa-brands/FacebookMessenger";
 import { CloseOutline } from "@styled-icons/evaicons-outline/CloseOutline";
 import { Hand } from "@styled-icons/entypo/Hand";
+
+const handShake = keyframes`
+      0% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(-20deg);
+    }
+`;
+
+export const HandIcon = styled(Hand)`
+  width: 4rem;
+  color: orange;
+  animation: ${handShake} 300ms linear 600ms;
+  animation-direction: alternate;
+  animation-iteration-count: 8;
+`;
 
 export const Container = styled.div`
   position: fixed;
@@ -16,6 +33,13 @@ export const Container = styled.div`
       ? "MoveIn 400ms cubic-bezier(.45,2.09,1,1) 0s"
       : "MoveOut 400ms cubic-bezier(.45,2.09,1,1) 0s"};
   animation-fill-mode: both;
+  &:hover ${HandIcon} {
+    animation: ${handShake};
+    animation-duration: 300ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+  }
 
   @keyframes MoveIn {
     0% {
@@ -72,22 +96,7 @@ export const CloseIcon = styled(CloseOutline)`
   position: absolute;
   right: 1px;
 `;
-export const HandIcon = styled(Hand)`
-  width: 4rem;
-  color: orange;
-  animation: handShake 300ms linear 600ms;
-  animation-direction: alternate;
-  animation-iteration-count: 8;
 
-  @keyframes handShake {
-    0% {
-      transform: rotate(20deg);
-    }
-    100% {
-      transform: rotate(-20deg);
-    }
-  }
-`;
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
