@@ -8,7 +8,15 @@ const Container = styled.section`
 `;
 const Wrapper = styled.div`
   h2 {
-    font-size: 5rem;
+    font-size: 8rem;
+    text-align: center;
+    color: ${({ theme }) => theme.colors.basePurple};
+  }
+  p {
+    text-align: center;
+    color: ${({ theme }) => theme.colors.grey};
+    font-size: 2rem;
+    padding: 1rem;
   }
 `;
 
@@ -17,7 +25,7 @@ export const NoRoutes = (props) => {
     <Container>
       <Wrapper>
         <h2>404</h2>
-        <div>Page Not Found</div>
+        <p>Page Not Found</p>
       </Wrapper>
     </Container>
   );
