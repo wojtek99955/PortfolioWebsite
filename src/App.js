@@ -1,51 +1,31 @@
 import React from "react";
-import Nav from "./components/Header/Nav/Nav";
-import Opening from "./components/Opening/Opening";
 import GlobalStyle from "./assets/styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
-import { theme } from './assets/styles/theme';
-import About from './components/About/About';
-import Portfolio from "./components/Portfolio/Portfolio";
-import Footer from "./components/Footer/Footer";
-import Contact from "./components/Contact/Contact";
-import HireMe from "./components/HireMe/HireMe";
+import { theme } from "./assets/styles/theme";
 import { useState } from "react";
-import Skills from "./components/Skills/Skills";
-import ScrollTopBtn from "./components/ScrollTopBtn/ScrollTopBtn";
-import TextMe from './components/TextMe/TextMe';
-
-
-
+import MainLayout from "./components/Layouts/MainLayout";
+import { Routes, Route } from "react-router-dom";
+import NoRoutes from "./components/Layouts/NoRoutes/NoRoutes";
 
 export const SwitchContext = React.createContext({});
 
-
 function App() {
-
   const [toggle, setToogle] = useState(+false);
 
   const handleToggle = (e) => {
-    setToogle(prev => !prev);
-    e.stopPropagation()
-  }
-
+    setToogle((prev) => !prev);
+    e.stopPropagation();
+  };
 
   return (
     <div>
-
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <SwitchContext.Provider value={{ toggle, handleToggle }}>
-          <GlobalStyle />
-          <ScrollTopBtn />
-          <TextMe />
-          <Nav />
-          <Opening />
-          <About />
-          <Skills />
-          <Portfolio />
-          <HireMe />
-          <Contact />
-          <Footer />
+          <Routes>
+            <Route path="/" element={<MainLayout />} />
+            <Route path="*" element={<NoRoutes />} />
+          </Routes>
         </SwitchContext.Provider>
       </ThemeProvider>
     </div>

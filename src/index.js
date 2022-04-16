@@ -2,16 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NoRoutes from "./components/NoRoutes/NoRoutes";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="*" element={<NoRoutes />} />
-      </Routes>
+      <App />
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
