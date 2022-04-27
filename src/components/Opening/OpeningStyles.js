@@ -283,6 +283,7 @@ export const SendButton = styled(Link)`
   position: relative;
   width: 10rem;
   font-size: ${({ theme }) => theme.fontSize.s};
+  white-space: nowrap;
 
   &::before {
     content: "";
