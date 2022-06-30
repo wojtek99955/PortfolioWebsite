@@ -90,7 +90,6 @@ export default function Portfolio() {
                       return (
                         <ul key={id}>
                           <li>
-                            {" "}
                             <CheckmarkIcon />
                             {tech}
                           </li>
