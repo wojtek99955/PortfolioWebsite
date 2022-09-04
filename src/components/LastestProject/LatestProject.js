@@ -1,9 +1,4 @@
 import { SectionTittle } from "../Atoms/SectionTittle";
-import styled from "styled-components";
-import projectImg from "../../assets/img/latestProject/befit-laptop.png";
-import { ImDatabase } from "react-icons/im";
-import { FaCalculator } from "react-icons/fa";
-import { MdFastfood } from "react-icons/md";
 import {
   Container,
   Wrapper,
