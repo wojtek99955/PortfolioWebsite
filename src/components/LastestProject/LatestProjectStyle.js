@@ -11,6 +11,7 @@ export const Container = styled.section`
 export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  padding-top: 2rem;
   p {
     line-height: 1.7rem;
     font-size: ${({ theme }) => theme.fontSize.xs};
@@ -47,7 +48,7 @@ export const ImageWrapper = styled.div`
 export const IconsContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  padding-bottom: 4rem;
+  padding: 4rem;
 `;
 export const DatabaseIcon = styled(ImDatabase)`
   color: ${({ theme }) => theme.colors.basePurple};
