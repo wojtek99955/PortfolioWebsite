@@ -9,15 +9,22 @@ import {
   DatabaseIcon,
   FoodIcon,
 } from "./LatestProjectStyle";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const LatestProject = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <Container>
-      <SectionTittle>
+      <SectionTittle data-aos="fade-down">
         <h2>Meet BeFit</h2>
         <h3>My latest project</h3>
       </SectionTittle>
-      <IconsContainer>
+      <IconsContainer data-aos="fade-up">
         <IconWrapper>
           <DatabaseIcon />
           <span>Realtime database</span>
@@ -31,7 +38,7 @@ const LatestProject = () => {
           <span>Calorie tracker</span>
         </IconWrapper>
       </IconsContainer>
-      <Wrapper>
+      <Wrapper data-aos="fade-up">
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
           sed eaque provident temporibus deserunt laudantium cum cumque aperiam
