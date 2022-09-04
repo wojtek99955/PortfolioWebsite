@@ -2,12 +2,14 @@ import { SectionTittle } from "../Atoms/SectionTittle";
 import {
   Container,
   Wrapper,
+  ImageWrapper,
   ImageContainer,
   IconWrapper,
   IconsContainer,
   CalculatorIcon,
   DatabaseIcon,
   FoodIcon,
+  ImageBackground,
 } from "./LatestProjectStyle";
 import { useEffect } from "react";
 import Aos from "aos";
@@ -57,7 +59,10 @@ const LatestProject = () => {
           quia dolore! Minima necessitatibus aperiam ipsa harum dignissimos!
           Delectus dicta quam animi, dolore nulla ducimus suscipit labore
         </p>
-        <ImageContainer />
+        <ImageContainer>
+          <ImageWrapper />
+          <ImageBackground />
+        </ImageContainer>
       </Wrapper>
     </Container>
   );

@@ -20,27 +20,29 @@ export const Wrapper = styled.div`
     width: 50%;
   }
 `;
-export const ImageContainer = styled.div`
+export const ImageWrapper = styled.div`
   background-image: url(${projectImg});
   background-size: contain;
   width: 24rem;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  animation-name: infinite-box;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 2000ms;
+
+  @keyframes infinite-box {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(15px);
+    }
+  }
 
   height: 30rem;
-  &::before {
-    content: "";
-    background-color: #c7c0f1;
-    width: 20rem;
-    height: 20rem;
-    display: block;
-    border-radius: 50%;
-    position: absolute;
-    z-index: -1;
-    top: 5rem;
-    left: 4rem;
-  }
 `;
 export const IconsContainer = styled.div`
   display: flex;
@@ -69,4 +71,21 @@ export const CalculatorIcon = styled(FaCalculator)`
 export const FoodIcon = styled(MdFastfood)`
   color: ${({ theme }) => theme.colors.basePurple};
   font-size: 3rem;
+`;
+
+export const ImageBackground = styled.div`
+  background-color: #c7c0f1;
+  width: 20rem;
+  height: 20rem;
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+  top: 5rem;
+  left: 4rem;
+  position: absolute;
+`;
+
+export const ImageContainer = styled.div`
+  position: relative;
 `;
