@@ -8,6 +8,7 @@ import TextMe from "../../components/TextMe/TextMe";
 import Nav from "../../components/Header/Nav/Nav";
 import Opening from "../../components/Opening/Opening";
 import About from "../../components/About/About";
+import LatestProject from "../../components/LastestProject/LatestProject";
 
 function MainLayout() {
   return (
@@ -18,6 +19,7 @@ function MainLayout() {
       <Opening />
       <About />
       <Skills />
+      <LatestProject />
       <Portfolio />
       <HireMe />
       <Contact />
