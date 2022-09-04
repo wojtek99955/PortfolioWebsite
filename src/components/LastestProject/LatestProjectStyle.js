@@ -4,11 +4,11 @@ import { ImDatabase } from "react-icons/im";
 import { FaCalculator } from "react-icons/fa";
 import { MdFastfood } from "react-icons/md";
 
-const Container = styled.section`
+export const Container = styled.section`
   max-width: 1100px;
   margin: auto;
 `;
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   p {
@@ -20,7 +20,7 @@ const Wrapper = styled.div`
     width: 50%;
   }
 `;
-const ImageContainer = styled.div`
+export const ImageContainer = styled.div`
   background-image: url(${projectImg});
   background-size: contain;
   width: 24rem;
@@ -42,16 +42,16 @@ const ImageContainer = styled.div`
     left: 4rem;
   }
 `;
-const IconsContainer = styled.div`
+export const IconsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   padding: 4rem 0;
 `;
-const DatabaseIcon = styled(ImDatabase)`
+export const DatabaseIcon = styled(ImDatabase)`
   color: ${({ theme }) => theme.colors.basePurple};
   font-size: 3rem;
 `;
-const IconWrapper = styled.div`
+export const IconWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,12 +61,12 @@ const IconWrapper = styled.div`
     font-size: 1.2rem;
   }
 `;
-const CalculatorIcon = styled(FaCalculator)`
+export const CalculatorIcon = styled(FaCalculator)`
   color: ${({ theme }) => theme.colors.basePurple};
   font-size: 3rem;
 `;
 
-const FoodIcon = styled(MdFastfood)`
+export const FoodIcon = styled(MdFastfood)`
   color: ${({ theme }) => theme.colors.basePurple};
   font-size: 3rem;
 `;
