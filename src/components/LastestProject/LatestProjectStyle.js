@@ -5,9 +5,8 @@ import { FaCalculator } from "react-icons/fa";
 import { MdFastfood } from "react-icons/md";
 
 export const Container = styled.section`
-  max-width: 1100px;
-  margin: auto;
-  padding: 4rem 0;
+  background-color: ${({ toggle, theme }) =>
+    toggle ? theme.colors.darkMode : theme.colors.white};
 `;
 export const Wrapper = styled.div`
   display: flex;
@@ -62,6 +61,8 @@ export const IconWrapper = styled.div`
   gap: 1rem;
   span {
     font-size: 1.2rem;
+    color: ${({ toggle, theme }) =>
+      toggle ? theme.colors.white : theme.colors.black};
   }
 `;
 export const CalculatorIcon = styled(FaCalculator)`
@@ -89,4 +90,10 @@ export const ImageBackground = styled.div`
 
 export const ImageContainer = styled.div`
   position: relative;
+`;
+
+export const SectionWrapper = styled.div`
+  max-width: 1100px;
+  margin: auto;
+  padding: 4rem 0;
 `;
