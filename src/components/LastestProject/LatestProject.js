@@ -30,7 +30,8 @@ const ImageContainer = styled.div`
 `;
 const IconsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding: 4rem 0;
 `;
 const DatabaseIcon = styled(ImDatabase)`
   color: ${({ theme }) => theme.colors.basePurple};
@@ -42,6 +43,9 @@ const IconWrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  span {
+    font-size: 1.2rem;
+  }
 `;
 const CalculatorIcon = styled(FaCalculator)`
   color: ${({ theme }) => theme.colors.basePurple};
