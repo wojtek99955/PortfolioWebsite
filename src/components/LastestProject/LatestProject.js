@@ -1,6 +1,6 @@
 import { SectionTittle } from "../Atoms/SectionTittle";
 import styled from "styled-components";
-import projectImg from "../../assets/img/latestProject/befit.png";
+import projectImg from "../../assets/img/latestProject/befit-laptop.png";
 import { ImDatabase } from "react-icons/im";
 import { FaCalculator } from "react-icons/fa";
 import { MdFastfood } from "react-icons/md";
@@ -10,23 +10,37 @@ const Container = styled.section`
 `;
 const Wrapper = styled.div`
   display: flex;
-
+  justify-content: space-between;
   p {
     line-height: 1.7rem;
     font-size: ${({ theme }) => theme.fontSize.xs};
     color: ${({ theme }) => theme.colors.grey};
     text-align: center;
     margin-top: 2rem;
+    width: 50%;
   }
 `;
 const ImageContainer = styled.div`
   background-image: url(${projectImg});
   background-size: contain;
-  width: 500%;
+  width: 24rem;
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
 
   height: 30rem;
+  &::before {
+    content: "";
+    background-color: #c7c0f1;
+    width: 20rem;
+    height: 20rem;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    top: 5rem;
+    left: 4rem;
+  }
 `;
 const IconsContainer = styled.div`
   display: flex;
