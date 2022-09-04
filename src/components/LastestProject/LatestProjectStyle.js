@@ -7,6 +7,7 @@ import { MdFastfood } from "react-icons/md";
 export const Container = styled.section`
   max-width: 1100px;
   margin: auto;
+  padding: 4rem 0;
 `;
 export const Wrapper = styled.div`
   display: flex;
@@ -47,7 +48,7 @@ export const ImageWrapper = styled.div`
 export const IconsContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  padding: 4rem 0;
+  padding-bottom: 4rem;
 `;
 export const DatabaseIcon = styled(ImDatabase)`
   color: ${({ theme }) => theme.colors.basePurple};
