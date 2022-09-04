@@ -1,6 +1,9 @@
 import { SectionTittle } from "../Atoms/SectionTittle";
 import styled from "styled-components";
 import projectImg from "../../assets/img/latestProject/befit.png";
+import { ImDatabase } from "react-icons/im";
+import { FaCalculator } from "react-icons/fa";
+import { MdFastfood } from "react-icons/md";
 const Container = styled.section`
   max-width: 1100px;
   margin: auto;
@@ -25,6 +28,30 @@ const ImageContainer = styled.div`
 
   height: 30rem;
 `;
+const IconsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const DatabaseIcon = styled(ImDatabase)`
+  color: ${({ theme }) => theme.colors.basePurple};
+  font-size: 3rem;
+`;
+const IconWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+`;
+const CalculatorIcon = styled(FaCalculator)`
+  color: ${({ theme }) => theme.colors.basePurple};
+  font-size: 3rem;
+`;
+
+const FoodIcon = styled(MdFastfood)`
+  color: ${({ theme }) => theme.colors.basePurple};
+  font-size: 3rem;
+`;
 const LatestProject = () => {
   return (
     <Container>
@@ -32,6 +59,20 @@ const LatestProject = () => {
         <h2>Meet BeFit</h2>
         <h3>My latest project</h3>
       </SectionTittle>
+      <IconsContainer>
+        <IconWrapper>
+          <DatabaseIcon />
+          <span>Realtime database</span>
+        </IconWrapper>
+        <IconWrapper>
+          <CalculatorIcon />
+          <span>Fitness calculators</span>
+        </IconWrapper>
+        <IconWrapper>
+          <FoodIcon />
+          <span>Calorie tracker</span>
+        </IconWrapper>
+      </IconsContainer>
       <Wrapper>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
