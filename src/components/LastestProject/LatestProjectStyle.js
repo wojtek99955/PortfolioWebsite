@@ -104,6 +104,10 @@ export const ImageBackground = styled.div`
   top: 8rem;
   left: 3rem;
   position: absolute;
+  @media ${device.tablet} {
+    width: 17rem;
+    height: 17rem;
+  }
 `;
 
 export const ImageContainer = styled.div`
