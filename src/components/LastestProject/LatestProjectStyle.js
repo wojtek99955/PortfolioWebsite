@@ -3,6 +3,7 @@ import projectImg from "../../assets/img/latestProject/befit-laptop.png";
 import { ImDatabase } from "react-icons/im";
 import { FaCalculator } from "react-icons/fa";
 import { MdFastfood } from "react-icons/md";
+import { device } from "../../assets/device";
 
 export const Container = styled.section`
   background-color: ${({ toggle, theme }) =>
@@ -10,21 +11,29 @@ export const Container = styled.section`
 `;
 export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 2rem;
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
   p {
     line-height: 1.7rem;
     font-size: ${({ theme }) => theme.fontSize.xs};
     color: ${({ theme }) => theme.colors.grey};
     text-align: center;
     margin-top: 2rem;
-    width: 50%;
+    padding: 0 1rem;
+    @media ${device.tablet} {
+      width: 50%;
+    }
   }
 `;
 export const ImageWrapper = styled.div`
   background-image: url(${projectImg});
   background-size: contain;
-  width: 24rem;
+  width: 12rem;
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -33,6 +42,9 @@ export const ImageWrapper = styled.div`
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-duration: 2000ms;
+  @media ${device.tablet} {
+    width: 20rem;
+  }
 
   @keyframes infinite-box {
     from {
@@ -47,8 +59,13 @@ export const ImageWrapper = styled.div`
 `;
 export const IconsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
+  gap: 3.5rem;
   padding: 4rem;
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `;
 export const DatabaseIcon = styled(ImDatabase)`
   color: ${({ theme }) => theme.colors.basePurple};
@@ -78,14 +95,14 @@ export const FoodIcon = styled(MdFastfood)`
 
 export const ImageBackground = styled.div`
   background-color: #c7c0f1;
-  width: 20rem;
-  height: 20rem;
+  width: 10rem;
+  height: 10rem;
   display: block;
   border-radius: 50%;
   position: absolute;
   z-index: -1;
-  top: 5rem;
-  left: 4rem;
+  top: 8rem;
+  left: 3rem;
   position: absolute;
 `;
 
