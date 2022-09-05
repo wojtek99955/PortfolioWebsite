@@ -70,7 +70,7 @@ export default function Portfolio() {
     <Section id="projects" toggle={context.toggle}>
       <StyledContainer data-aos="fade-down">
         <SectionTittle toggle={context.toggle}>
-          <h2>My Projects</h2>
+          <h2>Other Projects</h2>
           <h3>Most recent work</h3>
         </SectionTittle>
         <StyledSlider
