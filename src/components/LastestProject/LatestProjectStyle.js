@@ -17,6 +17,7 @@ export const Wrapper = styled.div`
   padding-top: 2rem;
   @media ${device.tablet} {
     flex-direction: row;
+    justify-content: space-between;
   }
   p {
     line-height: 1.7rem;
