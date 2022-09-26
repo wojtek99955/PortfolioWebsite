@@ -123,7 +123,7 @@ export const SectionWrapper = styled.div`
 
 export const StyledLink = styled.a`
   display: block;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   border: ${({ theme }) => `2px solid ${theme.colors.basePurple}`};
   border-radius: 8px;
   padding: 0.2rem;
@@ -131,6 +131,16 @@ export const StyledLink = styled.a`
     demo ? theme.colors.basePurple : "white"};
   color: ${({ demo }) => (demo ? "white" : "black")};
   cursor: pointer;
+  width: 9rem;
+  min-height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    box-shadow: ${({ demo }) =>
+      demo ? "0px 0px 16px 0px rgba(66, 68, 90, 1)" : "none"};
+    background-color: ${({ demo }) => (demo ? "#584ac1" : "#C7C0F1")};
+  }
 `;
 
 export const AppDemo = styled.div``;
