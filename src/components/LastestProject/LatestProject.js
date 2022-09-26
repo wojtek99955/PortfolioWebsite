@@ -49,23 +49,12 @@ const LatestProject = () => {
         </IconsContainer>
         <Wrapper data-aos="fade-up">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-            sed eaque provident temporibus deserunt laudantium cum cumque
-            aperiam quaerat quia! Esse officiis fuga blanditiis sunt voluptatem
-            ipsum minus odio dignissimos placeat enim, eligendi, architecto
-            eius? Molestiae maiores voluptatum eum nulla tempore, ipsam ipsum
-            natus illo nesciunt reiciendis. Illum perspiciatis iusto quam enim
-            corporis laboriosam perferendis explicabo recusandae ex similique
-            esse velit libero ipsa, ullam aliquid accusamus quasi quaerat
-            reiciendis molestiae vel. Rem, eligendi cumque officia optio quo
-            illo fugit. Voluptatum consectetur, rem recusandae possimus error
-            perferendis corrupti odit, voluptatibus molestias explicabo impedit?
-            Libero quae sint hic qui amet cum nobis molestias aspernatur, dolor
-            perspiciatis dolore, exercitationem saepe repudiandae iusto harum.
-            Praesentium, expedita. Voluptate culpa earum nam sit. Quidem
-            assumenda obcaecati quia dolore! Minima necessitatibus aperiam ipsa
-            harum dignissimos! Delectus dicta quam animi, dolore nulla ducimus
-            suscipit labore
+            BeFit is a fitness app that helps people stay in shape. It has a
+            bunch of fitness calculators including bmi, daily calorie intake and
+            activity calculators. Users can track their calorie intake and
+            amount of nutrients during the day. All data is stored in the
+            firebase database so that they can see how their intake changes
+            throughout the month in the statistics section.
           </p>
           <AppDemo>
             <ImageContainer>
