@@ -122,7 +122,7 @@ export const ImageContainer = styled.div`
 export const SectionWrapper = styled.div`
   max-width: 1100px;
   margin: auto;
-  padding: 4rem 0;
+  padding-top: 4rem;
 `;
 
 export const StyledLink = styled.a`
@@ -152,5 +152,10 @@ export const AppDemo = styled.div``;
 
 export const LinkContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  @media ${device.tablet} {
+    flex-direction: row;
+  }
 `;
