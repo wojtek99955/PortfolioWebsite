@@ -11,6 +11,9 @@ import {
   FoodIcon,
   ImageBackground,
   SectionWrapper,
+  StyledLink,
+  AppDemo,
+  LinkContainer,
 } from "./LatestProjectStyle";
 import { useEffect, useContext } from "react";
 import Aos from "aos";
@@ -64,10 +67,16 @@ const LatestProject = () => {
             harum dignissimos! Delectus dicta quam animi, dolore nulla ducimus
             suscipit labore
           </p>
-          <ImageContainer>
-            <ImageWrapper />
-            <ImageBackground />
-          </ImageContainer>
+          <AppDemo>
+            <ImageContainer>
+              <ImageWrapper />
+              <ImageBackground />
+            </ImageContainer>
+            <LinkContainer>
+              <StyledLink demo>Check out</StyledLink>
+              <StyledLink>Github</StyledLink>
+            </LinkContainer>
+          </AppDemo>
         </Wrapper>
       </SectionWrapper>
     </Container>

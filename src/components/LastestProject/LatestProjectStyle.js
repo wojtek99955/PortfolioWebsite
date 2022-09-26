@@ -120,3 +120,12 @@ export const SectionWrapper = styled.div`
   margin: auto;
   padding: 4rem 0;
 `;
+
+export const StyledLink = styled.a`
+  position: block;
+  font-size: 2rem;
+`;
+
+export const AppDemo = styled.div``;
+
+export const LinkContainer = styled.div``;
