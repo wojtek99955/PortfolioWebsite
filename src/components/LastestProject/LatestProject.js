@@ -73,8 +73,21 @@ const LatestProject = () => {
               <ImageBackground />
             </ImageContainer>
             <LinkContainer>
-              <StyledLink demo>Check out</StyledLink>
-              <StyledLink>Github</StyledLink>
+              <StyledLink
+                demo
+                href="https://wojtekk-be-fit.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Check out
+              </StyledLink>
+              <StyledLink
+                href="https://github.com/wojtek99955/Be-Fit"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Github
+              </StyledLink>
             </LinkContainer>
           </AppDemo>
         </Wrapper>

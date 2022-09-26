@@ -136,6 +136,7 @@ export const StyledLink = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
   &:hover {
     box-shadow: ${({ demo }) =>
       demo ? "0px 0px 16px 0px rgba(66, 68, 90, 1)" : "none"};
