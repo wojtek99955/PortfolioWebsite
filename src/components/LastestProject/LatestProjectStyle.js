@@ -122,10 +122,20 @@ export const SectionWrapper = styled.div`
 `;
 
 export const StyledLink = styled.a`
-  position: block;
-  font-size: 2rem;
+  display: block;
+  font-size: 1.8rem;
+  border: ${({ theme }) => `2px solid ${theme.colors.basePurple}`};
+  border-radius: 8px;
+  padding: 0.2rem;
+  background-color: ${({ theme, demo }) =>
+    demo ? theme.colors.basePurple : "white"};
+  color: ${({ demo }) => (demo ? "white" : "black")};
+  cursor: pointer;
 `;
 
 export const AppDemo = styled.div``;
 
-export const LinkContainer = styled.div``;
+export const LinkContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
