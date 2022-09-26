@@ -8,6 +8,9 @@ import { device } from "../../assets/device";
 export const Container = styled.section`
   background-color: ${({ toggle, theme }) =>
     toggle ? theme.colors.darkMode : theme.colors.white};
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
 `;
 export const Wrapper = styled.div`
   display: flex;
@@ -15,6 +18,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 2rem;
+  max-width: 900px;
   @media ${device.tablet} {
     flex-direction: row;
     justify-content: space-between;
