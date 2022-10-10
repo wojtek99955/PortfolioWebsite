@@ -72,7 +72,7 @@ const LatestProject = () => {
                 target="_blank"
                 rel="noreferrer"
               >
-                Check out
+                Try out
               </StyledLink>
               <StyledLink
                 href="https://github.com/wojtek99955/Be-Fit"
