@@ -49,12 +49,16 @@ const LatestProject = () => {
         </IconsContainer>
         <Wrapper data-aos="fade-up">
           <p>
-            BeFit is a fitness app that helps people stay in shape. It has a
+            BeFit is a fitness app that helps people stay in shape. It offers a
             bunch of fitness calculators including bmi, daily calorie intake and
             activity calculators. Users can track their calorie intake and
-            amount of nutrients during the day. All data is stored in the
-            firebase database so that they can see how their intake changes
-            throughout the month in the statistics section.
+            amount of nutrients during the day. All the data is stored in a
+            firebase database so that the user can see how their intake changes
+            throughout the month in the statistics section. Users are able to
+            change their name, email and password in the user settings section.
+            The firebase storage allows users adding avatar image to their
+            profile. In case of password loss users can reset their password via
+            email received from the app.
           </p>
           <AppDemo>
             <ImageContainer>
