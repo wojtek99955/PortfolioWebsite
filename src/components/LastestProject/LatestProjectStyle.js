@@ -67,7 +67,7 @@ export const IconsContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   gap: 3.5rem;
-  padding: 4rem;
+  padding: 3rem;
   @media ${device.tablet} {
     flex-direction: row;
   }
