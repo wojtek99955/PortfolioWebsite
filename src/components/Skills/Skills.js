@@ -53,7 +53,7 @@ function Skills() {
           <DevSkills>
             <SkillTittle toggle={context.toggle} onClick={handleOpen}>
               <BracesIcon />
-              <h2> Development</h2>
+              <h2>Frontend</h2>
               <DownIcon open={open} />
             </SkillTittle>
             {skills.map((skills, id) => {
