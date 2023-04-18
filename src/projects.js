@@ -1,5 +1,13 @@
 const projects = [
   {
+    src:"/img/screens/songs-raing.png",
+    name: "Songs Rating",
+    technologies:["React", "Typescript", "Express.js", "MongoDb", "Framer-motion"],
+    link:"https://wojtekk-songs-rating.netlify.app/",
+    githubLink:"https://github.com/wojtek99955/songs-rating"
+  },
+
+  {
     src: "/img/screens/fancy-shop-1.png",
     name: "Fancy Shop",
     technologies: ["React", "Typescript", "Styled-components"],
