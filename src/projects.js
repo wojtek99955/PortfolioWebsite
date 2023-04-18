@@ -7,7 +7,7 @@ const projects = [
     githubLink:"https://github.com/wojtek99955/money-balance"
   },
   {
-    src:"/img/screens/songs-raing.png",
+    src:"/img/screens/songs-rating.png",
     name: "Songs Rating",
     technologies:["React", "Typescript", "Express.js", "MongoDb", "Framer-motion"],
     link:"https://wojtekk-songs-rating.netlify.app/",
