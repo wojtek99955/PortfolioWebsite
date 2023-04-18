@@ -1,5 +1,12 @@
 const projects = [
   {
+    src:"/img/screens/money-balance.png",
+    name: "Money Balance",
+    technologies:["React", "Typescript","Redux", "Redux-toolkit-query", "Express.js", "MongoDb", "Framer-motion"],
+    link:"https://money-balance.netlify.app",
+    githubLink:"https://github.com/wojtek99955/money-balance"
+  },
+  {
     src:"/img/screens/songs-raing.png",
     name: "Songs Rating",
     technologies:["React", "Typescript", "Express.js", "MongoDb", "Framer-motion"],
